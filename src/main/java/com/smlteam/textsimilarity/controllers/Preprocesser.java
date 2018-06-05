@@ -1,7 +1,7 @@
 package com.smlteam.textsimilarity.controllers;
 
-//import ai.vitk.tok.Tokenizer;
-//import ai.vitk.type.Token;
+import ai.vitk.tok.Tokenizer;
+import ai.vitk.type.Token;
 import java.io.*;
 import java.util.*;
 import java.util.regex.Matcher;
