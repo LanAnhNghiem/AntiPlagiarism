@@ -1,7 +1,7 @@
 package com.smlteam.textsimilarity;
 
-import ai.vitk.tok.Tokenizer;
-import ai.vitk.type.Token;
+//import ai.vitk.tok.Tokenizer;
+//import ai.vitk.type.Token;
 import java.io.*;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -12,14 +12,16 @@ import java.util.regex.Pattern;
  * @author NVTC
  */
 public class Preprocesser {
+
     private static boolean isEN = false;
     private ArrayList<String> lstStopwordEN = new ArrayList<>();
     private ArrayList<String> lstStopwordVN = new ArrayList<>();
-    public Preprocesser(boolean isEN){
+
+    public Preprocesser(boolean isEN) {
         this.isEN = isEN;
-        if(isEN){
+        if (isEN) {
             lstStopwordEN = readFile(Constants.STOPWORDS_EN);
-        }else{
+        } else {
             lstStopwordVN = readFile(Constants.STOPWORDS_VN);
         }
     }
@@ -33,7 +35,6 @@ public class Preprocesser {
 //        System.out.println(newContent);
 //
 //    }
-
     //file's content to list converting function
     public List<String> fileToList(String fileName) {
         List<String> arrContent = new ArrayList();
@@ -46,7 +47,7 @@ public class Preprocesser {
             while ((line = br.readLine()) != null) {
                 String tmp = removeUrl(line);
                 tmp = removeSpecialChar(tmp);
-                doc += tmp ;
+                doc += tmp;
             }
 //            String[] sentences = doc.split("\\.");
 
@@ -57,48 +58,48 @@ public class Preprocesser {
         return arrContent;
     }
 
-    public List<String> fileToListVN(String fileName){
-        List<String> arrContent = new ArrayList<>();
-        try{
-            BufferedReader br = new BufferedReader(new FileReader(fileName));
-            String line;
-            Tokenizer tokenizer = new Tokenizer();
-            List<Token> tokenList = new LinkedList<>();
-            List<String> lstWord = new ArrayList<>();
-            String doc = "";
-            while ((line = br.readLine()) != null) {
-                String result = removeUrl(line);
-                result = removeSpecialChar(result);
-                String tmp = removeUrl(line);
-                tmp = removeSpecialChar(tmp);
-                tokenList.addAll(tokenizer.tokenize(result));
-
-            }
-            for(Token token: tokenList){
-                lstWord.add(token.getWord().replace(" ","_"));
-            }
-//            lstWord.removeAll(lstStopwordVN);
-            doc = String.join(" ", lstWord);
-            arrContent = Arrays.asList(doc.split("\\."));
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-        return arrContent;
-    }
-
-    public ArrayList<String> readFile(String fileName){
+//    public List<String> fileToListVN(String fileName){
+//        List<String> arrContent = new ArrayList<>();
+//        try{
+//            BufferedReader br = new BufferedReader(new FileReader(fileName));
+//            String line;
+//            Tokenizer tokenizer = new Tokenizer();
+//            List<Token> tokenList = new LinkedList<>();
+//            List<String> lstWord = new ArrayList<>();
+//            String doc = "";
+//            while ((line = br.readLine()) != null) {
+//                String result = removeUrl(line);
+//                result = removeSpecialChar(result);
+//                String tmp = removeUrl(line);
+//                tmp = removeSpecialChar(tmp);
+//                tokenList.addAll(tokenizer.tokenize(result));
+//
+//            }
+//            for(Token token: tokenList){
+//                lstWord.add(token.getWord().replace(" ","_"));
+//            }
+////            lstWord.removeAll(lstStopwordVN);
+//            doc = String.join(" ", lstWord);
+//            arrContent = Arrays.asList(doc.split("\\."));
+//        }catch (IOException e){
+//            e.printStackTrace();
+//        }
+//        return arrContent;
+//    }
+    public ArrayList<String> readFile(String fileName) {
         ArrayList<String> arrContent = new ArrayList<>();
-        try{
+        try {
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             String line;
             while ((line = br.readLine()) != null) {
                 arrContent.add(line);
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return arrContent;
     }
+
     public String removeSpecialChar(String word) {
         word = word.toLowerCase();
         Pattern pt = null;
@@ -109,12 +110,12 @@ public class Preprocesser {
             Matcher match = pt.matcher(word);
             while (match.find()) {
                 String s = match.group();
-                word = word.replace(s,"");
+                word = word.replace(s, "");
                 //remove ...
-                word = word.replaceAll("\\.{3,}","");
+                word = word.replaceAll("\\.{3,}", "");
             }
-            word = word.trim().replaceAll(" +"," ");
-        }catch (Exception e) {
+            word = word.trim().replaceAll(" +", " ");
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return word;
@@ -132,13 +133,13 @@ public class Preprocesser {
         return commentstr;
     }
 
-    public List<String> getPureContentFromFile(String path){
+    public List<String> getPureContentFromFile(String path) {
         List<String> content = new ArrayList<>();
-        if(isEN){
+        if (isEN) {
             content = fileToList(path);
 //            content.removeAll(lstStopwordEN);
-        }else{
-            content = fileToListVN(path);
+        } else {
+//            content = fileToListVN(path);
 //            content.removeAll(lstStopwordVN);
         }
 //        System.out.println("LENG: " + content.size());

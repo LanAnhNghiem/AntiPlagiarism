@@ -1,6 +1,6 @@
 package com.smlteam.textsimilarity;
-import ai.vitk.tok.Tokenizer;
-import ai.vitk.type.Token;
+//import ai.vitk.tok.Tokenizer;
+//import ai.vitk.type.Token;
 import com.smlteam.textsimilarity.Constants;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -117,75 +117,75 @@ public class Indexer {
             e.printStackTrace();
         }
     }
-    //Tách đoạn văn thành từ hoặc cụm từ
-    public static String tokenizer(String originPath){
-        List<String> doc = new LinkedList<>();
-        try {
-            Tokenizer tokenizer = new Tokenizer();
-            List<List<Token>> tokenList = Files.lines(Paths.get(originPath))
-                    .map(s-> tokenizer.tokenize(s))
-                    .collect(Collectors.toList());
-
-            for(List<Token> token : tokenList){
-                for(Token term: token){
-                    doc.add(term.getWord().replace(" ","_"));
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return doc.toString().replace("[","").replace("]","");
-    }
-
-    public static String tokenizer2(String path){
-        List<String> doc = new LinkedList<>();
-        List<Token> tokens = new LinkedList<>();
-        BufferedReader br = null;
-        FileReader fr = null;
-        Tokenizer tokenizer = new Tokenizer();
-        final ExecutorService executor = Executors.newFixedThreadPool(5);
-        final List<Future<?>> futures = new ArrayList<>();
-        try {
-            fr = new FileReader(path);
-            br = new BufferedReader(fr);
-            String line;
-            while((line = br.readLine()) != null){
-                tokens.addAll(tokenizer.tokenize(line));
-            }
-            for(Token token: tokens){
-                Future<?> future = executor.submit(() -> {
-                    doc.add(token.getWord().replace(" ","_"));
-                });
-                futures.add(future);
-
-            }
-            try {
-                for (Future<?> future : futures) {
-                    future.get(); // do anything you need, e.g. isDone(), ...
-                }
-            } catch (InterruptedException | ExecutionException e) {
-                e.printStackTrace();
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
-            try{
-                if(br != null){
-                    br.close();
-                }
-                if(fr != null){
-                    fr.close();
-                }
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-        }
-
-        return doc.toString().replace("[","").replace("]","");
-    }
+//    //Tách đoạn văn thành từ hoặc cụm từ
+//    public static String tokenizer(String originPath){
+//        List<String> doc = new LinkedList<>();
+//        try {
+//            Tokenizer tokenizer = new Tokenizer();
+//            List<List<Token>> tokenList = Files.lines(Paths.get(originPath))
+//                    .map(s-> tokenizer.tokenize(s))
+//                    .collect(Collectors.toList());
+//
+//            for(List<Token> token : tokenList){
+//                for(Token term: token){
+//                    doc.add(term.getWord().replace(" ","_"));
+//                }
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return doc.toString().replace("[","").replace("]","");
+//    }
+//
+//    public static String tokenizer2(String path){
+//        List<String> doc = new LinkedList<>();
+//        List<Token> tokens = new LinkedList<>();
+//        BufferedReader br = null;
+//        FileReader fr = null;
+//        Tokenizer tokenizer = new Tokenizer();
+//        final ExecutorService executor = Executors.newFixedThreadPool(5);
+//        final List<Future<?>> futures = new ArrayList<>();
+//        try {
+//            fr = new FileReader(path);
+//            br = new BufferedReader(fr);
+//            String line;
+//            while((line = br.readLine()) != null){
+//                tokens.addAll(tokenizer.tokenize(line));
+//            }
+//            for(Token token: tokens){
+//                Future<?> future = executor.submit(() -> {
+//                    doc.add(token.getWord().replace(" ","_"));
+//                });
+//                futures.add(future);
+//
+//            }
+//            try {
+//                for (Future<?> future : futures) {
+//                    future.get(); // do anything you need, e.g. isDone(), ...
+//                }
+//            } catch (InterruptedException | ExecutionException e) {
+//                e.printStackTrace();
+//            }
+//
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }finally {
+//            try{
+//                if(br != null){
+//                    br.close();
+//                }
+//                if(fr != null){
+//                    fr.close();
+//                }
+//            }catch (IOException e){
+//                e.printStackTrace();
+//            }
+//        }
+//
+//        return doc.toString().replace("[","").replace("]","");
+//    }
 
     //index một tập các văn bản
     public static void indexDocs(final IndexWriter writer, Path path, List<String> contents) throws IOException {
