@@ -5,11 +5,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <title>Help</title>
-        <link href="../../../styles/style.css" rel="stylesheet" />
+        <link href="styles/style.css" rel="stylesheet" />
         <link href="styles/bootstrap.css" rel="stylesheet" />
-        <link href="../../../styles/animate.min.css" rel="stylesheet" />
-        <link href="../../../styles/angular-material.css" rel="stylesheet" />
-        <link href="../../../styles/bootstrap.min.css" rel="stylesheet" />
+        <link href="styles/animate.min.css" rel="stylesheet" />
+        <link href="styles/angular-material.css" rel="stylesheet" />
+        <link href="styles/bootstrap.min.css" rel="stylesheet" />
     </head>
     
     <body>
@@ -76,19 +76,19 @@
                 </div>
                 <div class="clearfix"> </div>
                 
-                <script src="../../../scripts/fontawesome-all.js"></script>
-                <script src="../../../scripts/jquery.min.js"></script>
-                <script src="../../../scripts/jquery-ui.min.js"></script>
-                <script src="../../../scripts/jquery.signalR.min.js"></script>
-                <script src="../../../scripts/signalr.hubs.min.js"></script>
-                <script src="../../../scripts/angular.min.js"></script>
-                <script src="../../../scripts/angular-animate.min.js"></script>
-                <script src="../../../scripts/angular-file-model.js"></script>
-                <script src="../../../scripts/angular-aria.js"></script>
-                <script src="../../../scripts/angular-material.js"></script>
-                <script src="../../../scripts/ui-bootstrap.min.js"></script>
-                <script src="../../../scripts/ng-dropzone.js"></script>
-                <script src='../../../scripts/compareTwoFiles.js'></script>
+                <script src="scripts/fontawesome-all.js"></script>
+                <script src="scripts/jquery.min.js"></script>
+                <script src="scripts/jquery-ui.min.js"></script>
+                <script src="scripts/jquery.signalR.min.js"></script>
+                <script src="scripts/signalr.hubs.min.js"></script>
+                <script src="scripts/angular.min.js"></script>
+                <script src="scripts/angular-animate.min.js"></script>
+                <script src="scripts/angular-file-model.js"></script>
+                <script src="scripts/angular-aria.js"></script>
+                <script src="scripts/angular-material.js"></script>
+                <script src="scripts/ui-bootstrap.min.js"></script>
+                <script src="scripts/ng-dropzone.js"></script>
+                <script src='scripts/compareTwoFiles.js'></script>
                 
             </div>
         </div>

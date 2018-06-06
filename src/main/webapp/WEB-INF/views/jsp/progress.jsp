@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <title>Compare Two Documents</title>
         <link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../../../styles/plugin.css">
+        <link rel="stylesheet" type="text/css" href="styles/plugin.css">
 
         <!-- jQuery -->
         <style>
@@ -41,8 +41,8 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="../../../scripts/plugin.js"></script>
-        <script src="../../../scripts/script.js"></script>
+        <script src="scripts/plugin.js"></script>
+        <script src="scripts/script.js"></script>
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-36251023-1']);

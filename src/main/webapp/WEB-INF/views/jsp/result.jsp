@@ -5,14 +5,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <title>Compare Two Documents</title>
-        <link href="../../../styles/bootstrap.min.css" rel="stylesheet" />
+        <link href="styles/bootstrap.min.css" rel="stylesheet" />
         <link href="styles/progress.css" rel="stylesheet" />
-        <script src="../../../scripts/ui-bootstrap.min.js"></script>
-        <script src="../../../scripts/jquery.min.js"></script>
+        <script src="scripts/ui-bootstrap.min.js"></script>
+        <script src="scripts/jquery.min.js"></script>
     </head>
     <body>
         <div class="container">
-            <a href="index.jsp"><img src="../../../images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
+            <a href="index.jsp"><img src="images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
 
             <div class="row text-center" style="display: flex; align-items: center; justify-content: center; margin: 0px 0px 50px 0px">
                 <div class="row text-left">

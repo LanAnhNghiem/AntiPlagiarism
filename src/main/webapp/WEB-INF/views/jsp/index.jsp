@@ -5,9 +5,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <title>Compare Two Documents</title>
-        <link href="../../../styles/animate.min.css" rel="stylesheet" />
-        <link href="../../../styles/angular-material.css" rel="stylesheet" />
-        <link href="../../../styles/bootstrap.min.css" rel="stylesheet" />
+        <link href="styles/animate.min.css" rel="stylesheet" />
+        <link href="styles/angular-material.css" rel="stylesheet" />
+        <link href="styles/bootstrap.min.css" rel="stylesheet" />
     </head>
     
     <body>
@@ -17,9 +17,9 @@
                     <h1 class="col-md-9"><i class="fas fa-file-alt"></i>&nbsp;&nbsp;Compare Two Documents</h1>
 
                     <div class="row col-md-3" style="font-size: 20px; margin-top: 28px">
-                        <a href="../../../about.jsp" style="color: #049DFF; text-decoration: none"><i class="fas fa-users"></i> &nbsp;About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="about" style="color: #049DFF; text-decoration: none"><i class="fas fa-users"></i> &nbsp;About</a>&nbsp;&nbsp;&nbsp;&nbsp;
 
-                        <a href="../../../help.jsp" style="color: #049DFF; text-decoration: none"><i class="fas fa-question-circle"></i> Help</a>
+                        <a href="help" style="color: #049DFF; text-decoration: none"><i class="fas fa-question-circle"></i> Help</a>
                     </div>
                 </div><hr/>
 
@@ -83,23 +83,24 @@
                     </div>
 
                     <div class="row text-center">
-                        <a href="../../../progress.jsp" class="btn btn-success btn-lg"><strong><i class="fas fa-filter"></i>&nbsp;COMPARE</strong></a>
+                        <a href="progress" class="btn btn-success btn-lg"><strong><i class="fas fa-filter"></i>&nbsp;COMPARE</strong></a>
                     </div>
                 </div>
 
-                <script src="../../../scripts/fontawesome-all.js"></script>
-                <script src="../../../scripts/jquery.min.js"></script>
-                <script src="../../../scripts/jquery-ui.min.js"></script>
-                <script src="../../../scripts/jquery.signalR.min.js"></script>
-                <script src="../../../scripts/signalr.hubs.min.js"></script>
-                <script src="../../../scripts/angular.min.js"></script>
-                <script src="../../../scripts/angular-animate.min.js"></script>
-                <script src="../../../scripts/angular-file-model.js"></script>
-                <script src="../../../scripts/angular-aria.js"></script>
-                <script src="../../../scripts/angular-material.js"></script>
-                <script src="../../../scripts/ui-bootstrap.min.js"></script>
-                <script src="../../../scripts/ng-dropzone.js"></script>
-                <script src='../../../scripts/compareTwoFiles.js'></script>
+                <script src="scripts/fontawesome-all.js"></script>
+                <script src="scripts/jquery.min.js"></script>
+                <script src="scripts/jquery-ui.min.js"></script>
+                <script src="scripts/jquery.signalR.min.js"></script>
+                <script src="scripts/signalr.hubs.min.js"></script>
+                <script src="scripts/angular.min.js"></script>
+                <script src="scripts/angular-animate.min.js"></script>
+                <script src="scripts/angular-file-model.js"></script>
+                <script src="scripts/angular-aria.js"></script>
+                <script src="scripts/angular-material.js"></script>
+                <script src="scripts/ui-bootstrap.min.js"></script>
+                <script src="scripts/ng-dropzone.js"></script>
+                <script src='scripts/compareTwoFiles.js'></script>
+
             </div>
         </div>
     </body>

@@ -5,11 +5,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <title>About</title>
-        <link href="../../../styles/style.css" rel="stylesheet" />
+        <link href="styles/style.css" rel="stylesheet" />
         <link href="styles/bootstrap.css" rel="stylesheet" />
-        <link href="../../../styles/animate.min.css" rel="stylesheet" />
-        <link href="../../../styles/angular-material.css" rel="stylesheet" />
-        <link href="../../../styles/bootstrap.min.css" rel="stylesheet" />
+        <link href="styles/animate.min.css" rel="stylesheet" />
+        <link href="styles/angular-material.css" rel="stylesheet" />
+        <link href="styles/bootstrap.min.css" rel="stylesheet" />
     </head>
     
     <body>
@@ -46,31 +46,31 @@
                     <h3>Connect with us - SMLTeam</h3>
                    
                     <div class="member_team">
-                        <img src="../../../images/1.png" width="80" height="80" alt="back"/>
+                        <img src="images/1.png" width="80" height="80" alt="back"/>
                         <a>Lan Anh - SMLTeam</a>                       
                     </div>
                     <hr>
                     
                     <div class="member_team">
-                        <img src="../../../images/1.png" width="80" height="80" alt="back"/>
+                        <img src="images/1.png" width="80" height="80" alt="back"/>
                         <a>Hoàng Tâm - SMLTeam</a>                  
                     </div>
                     <hr>
                     
                     <div class="member_team">
-                        <img src="../../../images/1.png" width="80" height="80" alt="back"/>
+                        <img src="images/1.png" width="80" height="80" alt="back"/>
                         <a>Ngọc Tường - SMLTeam</a>                        
                     </div>
                     <hr>
                     
                     <div class="member_team">
-                        <img src="../../../images/1.png" width="80" height="80" alt="back"/>
+                        <img src="images/1.png" width="80" height="80" alt="back"/>
                         <a>Thành Chương - SMLTeam</a>                        
                     </div>
                     <hr>
                     
                     <div class="member_team">
-                        <img src="../../../images/1.png" width="80" height="80" alt="back"/>
+                        <img src="images/1.png" width="80" height="80" alt="back"/>
                         <a>Trung Lực - SMLTeam</a>                        
                     </div>
                     
@@ -82,19 +82,19 @@
                                 
         <div class="clearfix"> </div>
 
-        <script src="../../../scripts/fontawesome-all.js"></script>
-        <script src="../../../scripts/jquery.min.js"></script>
-        <script src="../../../scripts/jquery-ui.min.js"></script>
-        <script src="../../../scripts/jquery.signalR.min.js"></script>
-        <script src="../../../scripts/signalr.hubs.min.js"></script>
-        <script src="../../../scripts/angular.min.js"></script>
-        <script src="../../../scripts/angular-animate.min.js"></script>
-        <script src="../../../scripts/angular-file-model.js"></script>
-        <script src="../../../scripts/angular-aria.js"></script>
-        <script src="../../../scripts/angular-material.js"></script>
-        <script src="../../../scripts/ui-bootstrap.min.js"></script>
-        <script src="../../../scripts/ng-dropzone.js"></script>
-        <script src='../../../scripts/compareTwoFiles.js'></script>
+        <script src="scripts/fontawesome-all.js"></script>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jquery-ui.min.js"></script>
+        <script src="scripts/jquery.signalR.min.js"></script>
+        <script src="scripts/signalr.hubs.min.js"></script>
+        <script src="scripts/angular.min.js"></script>
+        <script src="scripts/angular-animate.min.js"></script>
+        <script src="scripts/angular-file-model.js"></script>
+        <script src="scripts/angular-aria.js"></script>
+        <script src="scripts/angular-material.js"></script>
+        <script src="scripts/ui-bootstrap.min.js"></script>
+        <script src="scripts/ng-dropzone.js"></script>
+        <script src='scripts/compareTwoFiles.js'></script>
                 
             </div>
         </div>
