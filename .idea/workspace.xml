@@ -7,27 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8237762-ece3-4c6b-9385-af23259a45b6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/help.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/help.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/progress.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/progress.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/controllers/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/controllers/Indexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/controllers/Indexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/controllers/Preprocesser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/controllers/Preprocesser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/help.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/help.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/progress.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/progress.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/Indexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/Indexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/Preprocesser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/Preprocesser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,10 +19,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="226">
               <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
             </state>
           </provider>
@@ -109,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebConfig.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WebConfig.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+            <state relative-caret-position="289">
+              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -162,9 +142,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/Preprocesser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/Indexer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java" />
       </list>
     </option>
   </component>
@@ -429,12 +409,12 @@
       <workItem from="1528201207278" duration="1053000" />
       <workItem from="1528204682958" duration="286000" />
       <workItem from="1528205024717" duration="2437000" />
-      <workItem from="1528253886222" duration="1962000" />
+      <workItem from="1528253886222" duration="2230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7033000" />
+    <option name="totallyTimeSpent" value="7301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -871,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/angular.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -903,8 +876,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="226">
           <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
         </state>
       </provider>
     </entry>
