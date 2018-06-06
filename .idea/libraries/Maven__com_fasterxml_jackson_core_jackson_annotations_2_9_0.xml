@@ -2,7 +2,7 @@
   <library name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/main/resources/vitk-tok-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../TextSimilarity/src/main/resources/vitk-tok-1.0.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-javadoc.jar!/" />

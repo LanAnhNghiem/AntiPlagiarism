@@ -7,7 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8237762-ece3-4c6b-9385-af23259a45b6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/AntiPlagiarism_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/AntiPlagiarism_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AntiPlagiarism.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AntiPlagiarism.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/config/RootConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/config/WebConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/config/WebInit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/CalcTFIDF.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/CosineSimilarity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/Indexer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/Preprocesser.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +37,14 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <state relative-caret-position="1683">
+              <caret line="99" column="36" selection-start-line="99" selection-start-column="36" selection-end-line="99" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#strong#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Preprocesser.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Preprocesser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/Preprocesser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,11 +110,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebConfig.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WebConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="340">
               <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -139,12 +169,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/Preprocesser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/Indexer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -206,41 +236,18 @@
             </path>
             <path>
               <item name="AntiPlagiarism" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiPlagiarism" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AntiPlagiarism" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiPlagiarism" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AntiPlagiarism" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiPlagiarism" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AntiPlagiarism" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiPlagiarism" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
               <item name="AntiPlagiarism" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: commons-fileupload:commons-fileupload:1.3.3" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="AntiPlagiarism" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: commons-fileupload:commons-fileupload:1.3.3" type="70bed36:NamedLibraryElementNode" />
+              <item name="commons-fileupload-1.3.3.jar" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -251,7 +258,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TextSimilarity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TextSimilarity/src/main/resources/vitk-tok-1.0.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -409,12 +416,12 @@
       <workItem from="1528201207278" duration="1053000" />
       <workItem from="1528204682958" duration="286000" />
       <workItem from="1528205024717" duration="2437000" />
-      <workItem from="1528253886222" duration="2230000" />
+      <workItem from="1528253886222" duration="5343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7301000" />
+    <option name="totallyTimeSpent" value="10414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -441,10 +448,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3290938" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -785,13 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/CalcTFIDF.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -824,16 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/Preprocesser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -876,15 +866,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="1683">
+          <caret line="99" column="36" selection-start-line="99" selection-start-column="36" selection-end-line="99" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/WebConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="340">
           <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/Preprocesser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
