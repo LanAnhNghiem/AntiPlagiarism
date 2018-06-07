@@ -24,7 +24,7 @@
             </div>
         </div>
         <hr/>
-        <form id="uploadForm" action="/upload" enctype="multipart/form-data" method="post">
+        <form action="upload" method="post" enctype="multipart/form-data">
             <div ng-cloak ng-show="step != STEP_PROGRESS">
                 <div class="row text-left margin-bottom" style="margin-bottom: 15px">
                     <div class="col-xs-12">
