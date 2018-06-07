@@ -79,6 +79,6 @@ public class HomeController {
 
     @GetMapping("/uploadStatus")
     public String uploadStatus() {
-        return "uploadResult";
+        return "uploadStatus";
     }
 }

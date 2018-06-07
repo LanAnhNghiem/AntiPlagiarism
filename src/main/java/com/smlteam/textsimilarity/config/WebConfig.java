@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
@@ -17,6 +18,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Bean
     public InternalResourceViewResolver resolver(){
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+        resolver.setViewClass(JstlView.class);
         resolver.setPrefix("/WEB-INF/views/jsp/");
         resolver.setSuffix(".jsp");
         return resolver;
@@ -28,13 +30,13 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/images/**").addResourceLocations("/images/").setCachePeriod(31556926);
         registry.addResourceHandler("/scripts/**").addResourceLocations("/scripts/").setCachePeriod(31556926);
     }
-
-    @Bean(name = "multipartResolver")
-    public MultipartResolver getMultipartResolver() {
-        CommonsMultipartResolver resover = new CommonsMultipartResolver();
-        // 1MB
-        resover.setMaxUploadSize(1 * 1024 * 1024);
-
-        return resover;
-    }
+//
+//    @Bean(name = "multipartResolver")
+//    public MultipartResolver getMultipartResolver() {
+//        CommonsMultipartResolver resover = new CommonsMultipartResolver();
+//        // 1MB
+//        resover.setMaxUploadSize(1 * 1024 * 1024);
+//
+//        return resover;
+//    }
 }
