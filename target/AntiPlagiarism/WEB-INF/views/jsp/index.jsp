@@ -24,7 +24,7 @@
             </div>
         </div>
         <hr/>
-        <form action="upload" method="post" enctype="multipart/form-data">
+        <form action="upload" method="post" enctype="multipart/form-data" id="formSubmit">
             <div ng-cloak ng-show="step != STEP_PROGRESS">
                 <div class="row text-left margin-bottom" style="margin-bottom: 15px">
                     <div class="col-xs-12">
@@ -103,9 +103,8 @@
                 </div>
 
                 <div class="row text-center">
-                    <input class="btn btn-success btn-lg" type="submit" id="submit" value="COMPARE">
-                    <%--<a class="btn btn-success btn-lg" id="btnSubmit"><strong><i--%>
-                            <%--class="fas fa-filter"></i>&nbsp;COMPARE</strong></a>--%>
+                    <a class="btn btn-success btn-lg" id="btnSubmit"><strong><i
+                            class="fas fa-filter"></i>&nbsp;COMPARE</strong></a>
                 </div>
             </div>
         </form>
@@ -122,6 +121,11 @@
         <script src="scripts/ui-bootstrap.min.js"></script>
         <script src="scripts/ng-dropzone.js"></script>
         <script src='scripts/compareTwoFiles.js'></script>
+        <script>
+            document.getElementById("btnSubmit").onclick = function() {
+                document.getElementById("formSubmit").submit();
+            }
+        </script>
     </div>
 </div>
 </body>
