@@ -2,6 +2,7 @@ package com.smlteam.textsimilarity.controllers;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -18,7 +19,8 @@ public class HomeController {
     private static String UPLOADED_FOLDER = "C:/Users/Chuong/";
 
     @RequestMapping(value = "/")
-    public String home() {
+    public String home(ModelMap model) {
+        model.addAttribute("A", "3");
         return "index";
     }
 
