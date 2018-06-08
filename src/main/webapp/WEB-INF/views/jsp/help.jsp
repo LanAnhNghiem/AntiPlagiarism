@@ -19,9 +19,9 @@
                     <h1 class="col-md-9"><i class="fas fa-file-alt"></i>&nbsp;&nbsp;Compare Two Documents</h1>
 
                     <div class="row col-md-3" style="font-size: 20px; margin-top: 28px">
-                        <a href="about.jsp" style="color: #049DFF; text-decoration: none"><i class="fas fa-users"></i> &nbsp;About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="about" style="color: #049DFF; text-decoration: none"><i class="fas fa-users"></i> &nbsp;About</a>&nbsp;&nbsp;&nbsp;&nbsp;
 
-                        <a href="help.jsp" style="color: #049DFF; text-decoration: none"><i class="fas fa-question-circle"></i> Help</a>
+                        <a href="help" style="color: #049DFF; text-decoration: none"><i class="fas fa-question-circle"></i> Help</a>
                     </div>
                 </div><hr/>
             </div>

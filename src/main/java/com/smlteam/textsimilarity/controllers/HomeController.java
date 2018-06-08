@@ -52,7 +52,7 @@ public class HomeController {
 
         for (MultipartFile file : files) {
 
-            if (file.isEmpty()) {
+            if (file == null) {
                 continue; //next pls
             }
             try {
