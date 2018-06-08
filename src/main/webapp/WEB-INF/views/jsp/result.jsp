@@ -16,8 +16,8 @@
 
             <div class="row text-center" style="display: flex; align-items: center; justify-content: center; margin: 0px 0px 50px 0px">
                 <div class="row text-left">
-                    <strong style="font-size: 40px; color: blue">2%</strong><span style="font-size: 35px"> identical</span><br>
-                    <strong style="font-size: 35px; color: red">No plagiarism</strong>
+                    <strong style="font-size: 40px; color: blue">${result}</strong><span style="font-size: 35px"> identical</span><br>
+                    <strong style="font-size: 35px; color: red">${resultMess}</strong>
                 </div>
             </div>
 

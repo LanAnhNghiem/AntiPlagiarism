@@ -76,7 +76,7 @@ public class HomeController {
             redirectAttributes.addFlashAttribute("message", "You successfully uploaded '" + uploadedFileName + "'");
         }
 
-        return "redirect:/uploadStatus";
+        return "redirect:/result";
     }
 
     @GetMapping("/uploadStatus")
