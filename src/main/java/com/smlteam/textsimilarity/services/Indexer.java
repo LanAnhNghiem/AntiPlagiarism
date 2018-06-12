@@ -1,4 +1,5 @@
 package com.smlteam.textsimilarity.services;
+
 import ai.vitk.tok.Tokenizer;
 import ai.vitk.type.Token;
 import org.apache.lucene.analysis.Analyzer;
@@ -10,8 +11,13 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
-import java.io.*;
-import java.nio.file.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.LinkedList;

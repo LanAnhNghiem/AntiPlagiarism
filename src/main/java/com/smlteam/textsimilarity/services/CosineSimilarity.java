@@ -1,9 +1,7 @@
 package com.smlteam.textsimilarity.services;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class CosineSimilarity {
@@ -26,4 +24,5 @@ public class CosineSimilarity {
         result = dotProduct/(Math.sqrt(d1)*Math.sqrt(d2));
         return result;
     }
+
 }

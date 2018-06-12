@@ -7,7 +7,9 @@ import org.apache.lucene.util.BytesRef;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 public class CalcTFIDF {
 
@@ -23,18 +25,18 @@ public class CalcTFIDF {
             Term termInstance = new Term("contents", term);
             long termFreq = itr.totalTermFreq();
             long docCount = reader.docFreq(termInstance);
-            double tf = (double)termFreq/ termVector.size();
-            vector.put(termText, tf);
+            double tfidf = (double)termFreq/ termVector.size();
+            vector.put(termText, tfidf);
 //            System.out.println("term: "+termText+", termFreq = "+termFreq+", docCount = "+docCount);
         }
 
         return vector;
     }
-    public List<HashMap<String, Double>>calcAllTFIDF(String s) {
+    public List<HashMap<String, Double>>calcAllTFIDF(String index) {
         IndexReader reader = null;
         List<HashMap<String, Double>> vectorList = new LinkedList<>();
         try {
-            reader = DirectoryReader.open(FSDirectory.open(new File(Constants.INDEX).toPath()));
+            reader = DirectoryReader.open(FSDirectory.open(new File(Constants.INDEX+"/index"+index).toPath()));
 
             for(int i=0 ; i< reader.numDocs(); i++){
                 vectorList.add(calcTFIDF(reader, i));

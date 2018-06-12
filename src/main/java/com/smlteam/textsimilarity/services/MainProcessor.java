@@ -1,10 +1,5 @@
 package com.smlteam.textsimilarity.services;
 
-import com.smlteam.textsimilarity.services.*;
-import com.smlteam.textsimilarity.services.Indexer;
-import com.smlteam.textsimilarity.services.Preprocesser;
-import com.smlteam.textsimilarity.services.CalcTFIDF;
-
 import java.util.HashMap;
 import java.util.List;
 
