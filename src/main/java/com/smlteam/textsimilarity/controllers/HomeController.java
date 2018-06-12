@@ -48,33 +48,33 @@ public class HomeController {
     public String multiFileUpload(@RequestParam("files") MultipartFile[] files,
                                   RedirectAttributes redirectAttributes) {
 
-        StringJoiner sj = new StringJoiner(" , ");
+//        StringJoiner sj = new StringJoiner(" , ");
 
-        for (MultipartFile file : files) {
+//        for (MultipartFile file : files) {
+//
+//            if (file == null) {
+//                continue; //next pls
+//            }
+//            try {
+//                byte[] bytes = file.getBytes();
+//                Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
+//                Files.write(path, bytes);
+//
+//                sj.add(file.getOriginalFilename());
+//
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
-            if (file == null) {
-                continue; //next pls
-            }
-            try {
-
-                byte[] bytes = file.getBytes();
-                Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
-                Files.write(path, bytes);
-
-                sj.add(file.getOriginalFilename());
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
-
-        String uploadedFileName = sj.toString();
-        if (StringUtils.isEmpty(uploadedFileName)) {
-            redirectAttributes.addFlashAttribute("message", "Please select a file to upload");
-        } else {
-            redirectAttributes.addFlashAttribute("message", "You successfully uploaded '" + uploadedFileName + "'");
-        }
+//        }
+//
+//        String uploadedFileName = sj.toString();
+//        if (StringUtils.isEmpty(uploadedFileName)) {
+//            redirectAttributes.addFlashAttribute("message", "Please select a file to upload");
+//        } else {
+//            redirectAttributes.addFlashAttribute("message", "You successfully uploaded '" + uploadedFileName + "'");
+//        }
+//            redirectAttributes.addFlashAttribute("resultColor", "green");
 
         return "redirect:/result";
     }

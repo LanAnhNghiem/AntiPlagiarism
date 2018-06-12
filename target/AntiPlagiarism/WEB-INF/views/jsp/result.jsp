@@ -12,12 +12,12 @@
     </head>
     <body>
         <div class="container">
-            <a href="index.jsp"><img src="images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
+            <a href="index"><img src="images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
 
             <div class="row text-center" style="display: flex; align-items: center; justify-content: center; margin: 0px 0px 50px 0px">
                 <div class="row text-left">
-                    <strong style="font-size: 40px; color: blue">2%</strong><span style="font-size: 35px"> identical</span><br>
-                    <strong style="font-size: 35px; color: red">No plagiarism</strong>
+                    <strong style="font-size: 40px; color: blue">${result}</strong><span style="font-size: 35px"> identical</span><br>
+                    <strong class="${resultColor}">No Plagiarism</strong>
                 </div>
             </div>
 
@@ -39,3 +39,10 @@
         </div>
     </body>
 </html>
+
+<style>
+    .green  {
+        color: #00CD66;
+        font-size: 35px;
+    }
+</style>
