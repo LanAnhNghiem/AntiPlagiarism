@@ -1,14 +1,19 @@
 package com.smlteam.textsimilarity.services;
 
+import com.smlteam.textsimilarity.models.ParagraphResult;
+
 import java.util.HashMap;
 import java.util.List;
 
 public class MainProcessor {
 
-    public static void compare(boolean isEN, String originFilePath, String testFilePath){
+    public static ParagraphResult[] compare(boolean isEN, String originFilePath, String testFilePath){
         Preprocesser preprocesser = new Preprocesser(isEN);
         List<String> originContent = preprocesser.getPureContentFromFile(originFilePath);
         List<String> testContent = preprocesser.getPureContentFromFile(testFilePath);
+
+        ParagraphResult originResult = null;
+        ParagraphResult testResult = null;
         Indexer indexer = new Indexer();
         CalcTFIDF calcTFIDF = new CalcTFIDF();
         for(int i = 0; i < testContent.size(); i++){
@@ -22,6 +27,8 @@ public class MainProcessor {
                 origin ++;
             }
         }
+        ParagraphResult[] listResult= {originResult, testResult};
+        return listResult;
     }
     public static void main(String[] args){
 

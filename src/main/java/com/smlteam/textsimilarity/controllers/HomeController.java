@@ -1,6 +1,7 @@
 package com.smlteam.textsimilarity.controllers;
 
 
+import com.smlteam.textsimilarity.models.ParagraphResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
@@ -75,7 +76,9 @@ public class HomeController {
 //            redirectAttributes.addFlashAttribute("message", "You successfully uploaded '" + uploadedFileName + "'");
 //        }
 //            redirectAttributes.addFlashAttribute("resultColor", "green");
-
+        //Lưu file
+        //Xử lý file
+        ParagraphResult[] listResult;
         return "redirect:/result";
     }
 
