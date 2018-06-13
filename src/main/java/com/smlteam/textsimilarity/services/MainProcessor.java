@@ -7,7 +7,7 @@ import java.util.List;
 
 public class MainProcessor {
 
-    public static ParagraphResult[] compare(boolean isEN, String originFilePath, String testFilePath){
+    public static ParagraphResult[] compare(boolean isEN){
         Preprocesser preprocesser = new Preprocesser(isEN);
         List<String> originContent = preprocesser.getPureContentFromFile(Constants.ORIGIN);
         List<String> testContent = preprocesser.getPureContentFromFile(Constants.TEST);
@@ -32,7 +32,7 @@ public class MainProcessor {
     }
     public static void main(String[] args){
 
-        MainProcessor.compare(false, Constants.ORIGIN, Constants.TEST);
+        MainProcessor.compare(false);
 //        Preprocesser preprocesser = new Preprocesser(false);
 //        List<String> originContent = preprocesser.getPureContentFromFile(Constants.ORIGIN);
 //        List<String> testContent = preprocesser.getPureContentFromFile(Constants.TEST);
