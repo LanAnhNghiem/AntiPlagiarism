@@ -9,8 +9,8 @@ public class MainProcessor {
 
     public static ParagraphResult[] compare(boolean isEN, String originFilePath, String testFilePath){
         Preprocesser preprocesser = new Preprocesser(isEN);
-        List<String> originContent = preprocesser.getPureContentFromFile(originFilePath);
-        List<String> testContent = preprocesser.getPureContentFromFile(testFilePath);
+        List<String> originContent = preprocesser.getPureContentFromFile(Constants.ORIGIN);
+        List<String> testContent = preprocesser.getPureContentFromFile(Constants.TEST);
 
         ParagraphResult originResult = null;
         ParagraphResult testResult = null;
