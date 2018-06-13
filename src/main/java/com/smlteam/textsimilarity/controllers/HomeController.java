@@ -17,7 +17,7 @@ import java.util.StringJoiner;
 
 @Controller
 public class HomeController {
-    private static String UPLOADED_FOLDER = "C:/Users/Chuong/";
+    private static String UPLOADED_FOLDER = "src/main/resources/test/";
 
     @RequestMapping(value = "/")
     public String home(ModelMap model) {
@@ -48,7 +48,6 @@ public class HomeController {
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public String multiFileUpload(@RequestParam("files") MultipartFile[] files,
                                   RedirectAttributes redirectAttributes) {
-
 //        StringJoiner sj = new StringJoiner(" , ");
 
 //        for (MultipartFile file : files) {

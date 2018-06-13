@@ -1,9 +1,10 @@
 package com.smlteam.textsimilarity.models;
 
 public class SentenceResult {
-    String sentenceContent;
-    Double score;
-    String isPlagiarism;
+    private String sentenceContent;
+    private Double score;
+    private String isPlagiarism;
+    private int id;
 
     public String getSentenceContent() {
         return sentenceContent;
@@ -29,9 +30,19 @@ public class SentenceResult {
         this.isPlagiarism = isPlagiarism;
     }
 
-    public SentenceResult(String sentenceContent, Double score, String isPlagiarism) {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public SentenceResult(String sentenceContent, Double score, String isPlagiarism, int id) {
         this.sentenceContent = sentenceContent;
         this.score = score;
         this.isPlagiarism = isPlagiarism;
+        this.id = id;
     }
 }
+

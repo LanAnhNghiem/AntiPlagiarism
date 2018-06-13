@@ -1,10 +1,16 @@
 package com.smlteam.textsimilarity.models;
 
+import org.springframework.lang.Nullable;
+
+import java.util.ArrayList;
 import java.util.List;
 
+
 public class ParagraphResult {
-    Double finalScore;
-    List<SentenceResult> lstSentence;
+
+    private Double finalScore;
+    private List<SentenceResult> lstSentence;
+
 
     public Double getFinalScore() {
         return finalScore;
@@ -13,7 +19,6 @@ public class ParagraphResult {
     public void setFinalScore(Double finalScore) {
         this.finalScore = finalScore;
     }
-
     public List<SentenceResult> getLstSentence() {
         return lstSentence;
     }
@@ -25,5 +30,10 @@ public class ParagraphResult {
     public ParagraphResult(Double finalScore, List<SentenceResult> lstSentence) {
         this.finalScore = finalScore;
         this.lstSentence = lstSentence;
+    }
+//
+    public ParagraphResult() {
+        this.lstSentence = new ArrayList<>();
+        this.finalScore = 0.0;
     }
 }
