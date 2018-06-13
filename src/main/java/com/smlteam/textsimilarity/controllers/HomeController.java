@@ -75,6 +75,7 @@ public class HomeController {
 //            redirectAttributes.addFlashAttribute("resultColor", "green");
         //Lưu file
         //Xử lý file
+        MainProcessor.saveFile(files);
         ParagraphResult[] listResult = MainProcessor.compare(false);
         redirectAttributes.addFlashAttribute("listReuslt", listResult);
         return "redirect:/result";

@@ -45,12 +45,22 @@ public class MainProcessor {
     }
 
     public static void saveFile(MultipartFile[] files) {
-        String UPLOADED_FOLDER = "src/main/resources/test/";
-        if (files[0] == null) {
-        }
+        String UPLOADED_FOLDER = "C:\\Users\\Chuong\\Documents\\GitHub\\AntiPlagiarism\\src\\main\\resources\\test\\";
+
+        //Save test file
         try {
             byte[] bytes = files[0].getBytes();
             Path path = Paths.get(UPLOADED_FOLDER + "test.txt");
+            Files.write(path, bytes);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //Save origin file
+        try {
+            byte[] bytes = files[1].getBytes();
+            Path path = Paths.get(UPLOADED_FOLDER + "origin.txt");
             Files.write(path, bytes);
 
         } catch (IOException e) {
