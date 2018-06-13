@@ -77,8 +77,15 @@ public class HomeController {
         //Xử lý file
         MainProcessor.saveFile(files);
         ParagraphResult[] listResult = MainProcessor.compare(false);
-        redirectAttributes.addFlashAttribute("finalScore", listResult[1].getFinalScore());
-        redirectAttributes.addFlashAttribute("resultColor", "green");
+        redirectAttributes.addFlashAttribute("finalScore", listResult);
+        if (listResult[1].getFinalScore() > 0.5){
+            redirectAttributes.addFlashAttribute("resultColor", "red");
+            redirectAttributes.addFlashAttribute("resultMess", "Plagiarism");
+
+        } else {
+            redirectAttributes.addFlashAttribute("resultColor", "green");
+            redirectAttributes.addFlashAttribute("resultMess", "No Plagiarism");
+        }
         return "redirect:/result";
     }
 
