@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="container">
-            <a href="/"><img src="images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
+            <a href="/AntiPlagiarism/"><img src="images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
 
             <div class="row text-center" style="display: flex; align-items: center; justify-content: center; margin: 0px 0px 50px 0px">
                 <div class="row text-left">
