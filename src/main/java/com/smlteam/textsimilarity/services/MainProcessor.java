@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MainProcessor {
 
-    public ParagraphResult[] compare(boolean isEN) {
+    public static ParagraphResult[] compare(boolean isEN) {
         Preprocesser preprocesser = new Preprocesser(isEN);
         List<String> originContent = preprocesser.getPureContentFromFile(Constants.ORIGIN);
         List<String> testContent = preprocesser.getPureContentFromFile(Constants.TEST);

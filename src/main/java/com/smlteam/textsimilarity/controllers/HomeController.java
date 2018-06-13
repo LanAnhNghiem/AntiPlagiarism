@@ -2,6 +2,7 @@ package com.smlteam.textsimilarity.controllers;
 
 
 import com.smlteam.textsimilarity.models.ParagraphResult;
+import com.smlteam.textsimilarity.services.MainProcessor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
@@ -65,7 +66,6 @@ public class HomeController {
 //            } catch (IOException e) {
 //                e.printStackTrace();
 //            }
-
 //        }
 //
 //        String uploadedFileName = sj.toString();
@@ -77,7 +77,8 @@ public class HomeController {
 //            redirectAttributes.addFlashAttribute("resultColor", "green");
         //Lưu file
         //Xử lý file
-        ParagraphResult[] listResult;
+        ParagraphResult[] listResult = MainProcessor.compare(false);
+        redirectAttributes.addFlashAttribute("listReuslt", listResult);
         return "redirect:/result";
     }
 
