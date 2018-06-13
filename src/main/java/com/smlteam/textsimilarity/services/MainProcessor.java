@@ -23,6 +23,8 @@ public class MainProcessor {
         ParagraphResult testResult = new ParagraphResult();
         Indexer indexer = new Indexer();
         CalcTFIDF calcTFIDF = new CalcTFIDF();
+        int numOfPlaSentence = 0;
+        Double totalScore = 0.0;
         for (int i = 0; i < testContent.size(); i++) {
             //add variable
             int origin = 0;
@@ -36,11 +38,16 @@ public class MainProcessor {
                 if (result > 0.5) {
                     testResult.getLstSentence().add(new SentenceResult(testContent.get(i), result, "yes", i));
                     originResult.getLstSentence().add(new SentenceResult(docO, result, "yes", i));
+
+                    numOfPlaSentence++;
+                    totalScore += result;
                     break;
                 }
                 origin++;
             }
         }
+
+        testResult.setFinalScore(totalScore/numOfPlaSentence);
         return new ParagraphResult[]{originResult, testResult};
     }
 
