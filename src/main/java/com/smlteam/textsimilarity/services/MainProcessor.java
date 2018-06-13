@@ -5,6 +5,8 @@ import com.smlteam.textsimilarity.models.SentenceResult;
 import org.springframework.web.multipart.MultipartFile;
 import sun.applet.Main;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -47,7 +49,7 @@ public class MainProcessor {
             }
         }
 
-        testResult.setFinalScore(totalScore/numOfPlaSentence);
+        testResult.setFinalScore(totalScore / numOfPlaSentence);
         return new ParagraphResult[]{originResult, testResult};
     }
 
@@ -55,24 +57,46 @@ public class MainProcessor {
         String UPLOADED_FOLDER = "C:\\Users\\Chuong\\Documents\\GitHub\\AntiPlagiarism\\src\\main\\resources\\test\\";
 
         //Save test file
-        try {
-            byte[] bytes = files[0].getBytes();
-            Path path = Paths.get(UPLOADED_FOLDER + "test.txt");
-            Files.write(path, bytes);
+        if (files[0].isEmpty()) {
+            try {
+                File file = new File(UPLOADED_FOLDER + "test.txt");
+                FileWriter writer = new FileWriter(file);
+                writer.write("");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                byte[] bytes = files[0].getBytes();
+                Path path = Paths.get(UPLOADED_FOLDER + "test.txt");
+                Files.write(path, bytes);
 
-        } catch (IOException e) {
-            e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+
 
         //Save origin file
-        try {
-            byte[] bytes = files[1].getBytes();
-            Path path = Paths.get(UPLOADED_FOLDER + "origin.txt");
-            Files.write(path, bytes);
+        if (files[1].isEmpty()) {
+            try {
+                File file = new File(UPLOADED_FOLDER + "origin.txt");
+                FileWriter writer = new FileWriter(file);
+                writer.write("");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                byte[] bytes = files[1].getBytes();
+                Path path = Paths.get(UPLOADED_FOLDER + "origin.txt");
+                Files.write(path, bytes);
 
-        } catch (IOException e) {
-            e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+
     }
 
     public static void main(String[] args) {

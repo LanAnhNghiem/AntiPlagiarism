@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
 import java.util.StringJoiner;
 
 @Controller
@@ -47,37 +48,10 @@ public class HomeController {
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public String multiFileUpload(@RequestParam("files") MultipartFile[] files,
                                   RedirectAttributes redirectAttributes) {
-//        StringJoiner sj = new StringJoiner(" , ");
-
-//        for (MultipartFile file : files) {
-//
-//            if (file == null) {
-//                continue; //next pls
-//            }
-//            try {
-//                byte[] bytes = file.getBytes();
-//                Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
-//                Files.write(path, bytes);
-//
-//                sj.add(file.getOriginalFilename());
-//
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//
-//        String uploadedFileName = sj.toString();
-//        if (StringUtils.isEmpty(uploadedFileName)) {
-//            redirectAttributes.addFlashAttribute("message", "Please select a file to upload");
-//        } else {
-//            redirectAttributes.addFlashAttribute("message", "You successfully uploaded '" + uploadedFileName + "'");
-//        }
-//            redirectAttributes.addFlashAttribute("resultColor", "green");
         //Lưu file
-        //Xử lý file
         MainProcessor.saveFile(files);
         ParagraphResult[] listResult = MainProcessor.compare(false);
-        redirectAttributes.addFlashAttribute("finalScore", listResult);
+        redirectAttributes.addFlashAttribute("finalScore", new DecimalFormat("#.##").format(listResult[1].getFinalScore() * 100));
         if (listResult[1].getFinalScore() > 0.5){
             redirectAttributes.addFlashAttribute("resultColor", "red");
             redirectAttributes.addFlashAttribute("resultMess", "Plagiarism");

@@ -12,12 +12,12 @@
     </head>
     <body>
         <div class="container">
-            <a href="index"><img src="images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
+            <a href="/"><img src="images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
 
             <div class="row text-center" style="display: flex; align-items: center; justify-content: center; margin: 0px 0px 50px 0px">
                 <div class="row text-left">
-                    <strong style="font-size: 40px; color: blue">${finalScore[1].getFinalScore() * 100} %</strong><span style="font-size: 35px"> identical</span><br>
-                    <strong class="${resultColor}">${resultMess}</strong>
+                    <strong style="font-size: 40px; color: blue">${finalScore} %</strong><span style="font-size: 35px"> identical</span><br>
+                    <strong class="${resultColor}" style="padding-left: 20px">${resultMess}</strong>
                 </div>
             </div>
 
@@ -44,10 +44,12 @@
     .green  {
         color: #00CD66;
         font-size: 35px;
+        text-align: center;
     }
 
     .red{
         color: red;
         font-size: 35px;
+        text-align: center;
     }
 </style>
