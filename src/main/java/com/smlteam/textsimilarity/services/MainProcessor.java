@@ -23,7 +23,7 @@ public class MainProcessor {
         ParagraphResult testResult = new ParagraphResult();
         Indexer indexer = new Indexer();
         CalcTFIDF calcTFIDF = new CalcTFIDF();
-        int numOfPlaSentence = 0;
+        Double numOfPlaSentence = 0.0;
         Double totalScore = 0.0;
         for (int i = 0; i < testContent.size(); i++) {
             //add variable
