@@ -18,8 +18,6 @@ import java.util.StringJoiner;
 
 @Controller
 public class HomeController {
-    private static String UPLOADED_FOLDER = "src/main/resources/test/";
-
     @RequestMapping(value = "/")
     public String home(ModelMap model) {
         model.addAttribute("A", "3");
@@ -86,4 +84,6 @@ public class HomeController {
     public String uploadStatus() {
         return "uploadStatus";
     }
+
+
 }

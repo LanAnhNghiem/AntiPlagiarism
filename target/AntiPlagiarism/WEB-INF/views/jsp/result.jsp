@@ -45,4 +45,9 @@
         color: #00CD66;
         font-size: 35px;
     }
+
+    .red{
+        color: red;
+        font-size: 35px;
+    }
 </style>

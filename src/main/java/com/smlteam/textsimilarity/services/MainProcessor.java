@@ -2,8 +2,13 @@ package com.smlteam.textsimilarity.services;
 
 import com.smlteam.textsimilarity.models.ParagraphResult;
 import com.smlteam.textsimilarity.models.SentenceResult;
+import org.springframework.web.multipart.MultipartFile;
 import sun.applet.Main;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 
@@ -39,9 +44,23 @@ public class MainProcessor {
         return new ParagraphResult[]{originResult, testResult};
     }
 
+    public static void saveFile(MultipartFile[] files) {
+        String UPLOADED_FOLDER = "src/main/resources/test/";
+        if (files[0] == null) {
+        }
+        try {
+            byte[] bytes = files[0].getBytes();
+            Path path = Paths.get(UPLOADED_FOLDER + "test.txt");
+            Files.write(path, bytes);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
 
-         new MainProcessor().compare(false);
+        new MainProcessor().compare(false);
 //        Preprocesser preprocesser = new Preprocesser(false);
 //        List<String> originContent = preprocesser.getPureContentFromFile(Constants.ORIGIN);
 //        List<String> testContent = preprocesser.getPureContentFromFile(Constants.TEST);
