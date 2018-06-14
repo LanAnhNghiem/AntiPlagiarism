@@ -73,4 +73,9 @@ public class HomeController {
 
         return "redirect:/result";
     }
+
+    @RequestMapping(value = "/text", method = RequestMethod.GET)
+    public String textUpoad(){
+        return "text_upload";
+    }
 }
