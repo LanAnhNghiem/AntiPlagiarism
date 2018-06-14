@@ -32,12 +32,12 @@
                             <md-button class="groupX left md-raised"
                                        ng-click="selectedScanSourceTypes='file';resetStep()"
                                        ng-class="{'md-accent': selectedScanSourceTypes=='file'}"><strong><i
-                                    class="fas fa-paperclip"></i>&nbsp;&nbsp;File</strong></md-button>
+                                    class="fas fa-paperclip"></i>&nbsp;&nbsp;File<a href="/AntiPlagiarism/"></a></strong></md-button>
 
                             <md-button class="groupX right md-raised"
                                        ng-click="selectedScanSourceTypes='text';resetStep()"
                                        ng-class="{'md-accent': selectedScanSourceTypes=='text'}"><strong><i
-                                    class="far fa-file-alt"></i>&nbsp;&nbsp;Text</strong></md-button>
+                                    class="far fa-file-alt"></i>&nbsp;&nbsp;Text</strong><a href=""></a></md-button>
                         </section>
                     </div>
                 </div>

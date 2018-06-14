@@ -16,17 +16,20 @@ import java.util.List;
 
 public class MainProcessor {
 
-    public static ParagraphResult[] compare(boolean isEN) {
+    public ParagraphResult[] compare(boolean isEN) {
         Preprocesser preprocesser = new Preprocesser(isEN);
         List<String> originContent = preprocesser.getPureContentFromFile(Constants.ORIGIN);
         List<String> testContent = preprocesser.getPureContentFromFile(Constants.TEST);
 
         ParagraphResult originResult = new ParagraphResult();
         ParagraphResult testResult = new ParagraphResult();
+
         Indexer indexer = new Indexer();
         CalcTFIDF calcTFIDF = new CalcTFIDF();
+
         Double numOfPlaSentence = 0.0;
         Double totalScore = 0.0;
+
         for (int i = 0; i < testContent.size(); i++) {
             //add variable
             int origin = 0;
@@ -41,6 +44,8 @@ public class MainProcessor {
                     testResult.getLstSentence().add(new SentenceResult(testContent.get(i), result, "yes", i));
                     originResult.getLstSentence().add(new SentenceResult(docO, result, "yes", i));
 
+                    System.out.println(testContent.get(i));
+
                     numOfPlaSentence++;
                     totalScore += result;
                     break;
@@ -52,6 +57,7 @@ public class MainProcessor {
         if (numOfPlaSentence != 0.0){
             finalscore = totalScore / numOfPlaSentence;
         }
+        System.out.println("FINAL SCORE: " + finalscore);
         testResult.setFinalScore(finalscore);
         return new ParagraphResult[]{originResult, testResult};
     }

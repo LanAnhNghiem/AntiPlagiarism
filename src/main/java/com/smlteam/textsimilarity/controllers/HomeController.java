@@ -50,7 +50,7 @@ public class HomeController {
                                   RedirectAttributes redirectAttributes) {
         //Lưu file
         MainProcessor.saveFile(files);
-        ParagraphResult[] listResult = MainProcessor.compare(false);
+        ParagraphResult[] listResult = new MainProcessor().compare(false);
         redirectAttributes.addFlashAttribute("finalScore", new DecimalFormat("#.##").format(listResult[1].getFinalScore() * 100));
         if (listResult[1].getFinalScore() > 0.5){
             redirectAttributes.addFlashAttribute("resultColor", "red");
@@ -62,11 +62,4 @@ public class HomeController {
         }
         return "redirect:/result";
     }
-
-    @GetMapping("/uploadStatus")
-    public String uploadStatus() {
-        return "uploadStatus";
-    }
-
-
 }
