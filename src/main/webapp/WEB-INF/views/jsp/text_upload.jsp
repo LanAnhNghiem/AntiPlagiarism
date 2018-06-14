@@ -29,10 +29,13 @@
                 <div class="row text-left margin-bottom" style="margin-bottom: 15px">
                     <div class="col-xs-12">
                         <section layout="row" layout-align="center center">
-                            <md-button class="groupX left md-raised"
-                                       ng-click="selectedScanSourceTypes='file';resetStep()"
-                                       ng-class="{'md-accent': selectedScanSourceTypes=='file'}"><strong><i
-                                    class="fas fa-paperclip"></i>&nbsp;&nbsp;File<a href="/AntiPlagiarism/"></a></strong></md-button>
+                            <a href="/AntiPlagiarism/">
+                                <md-button class="groupX left md-raised"
+                                           ng-click="selectedScanSourceTypes='file';resetStep()"
+                                           ng-class="{'md-accent': selectedScanSourceTypes=='file'}"><strong><i
+                                        class="fas fa-paperclip"></i>&nbsp;&nbsp;File<a href="/AntiPlagiarism/"></a></strong></md-button>
+                            </a>
+
 
                             <md-button class="groupX right md-raised"
                                        ng-click="selectedScanSourceTypes='text';resetStep()"
