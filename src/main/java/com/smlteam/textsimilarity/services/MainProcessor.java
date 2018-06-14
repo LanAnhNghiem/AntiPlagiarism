@@ -48,8 +48,11 @@ public class MainProcessor {
                 origin++;
             }
         }
-
-        testResult.setFinalScore(totalScore / numOfPlaSentence);
+        Double finalscore = 0.0;
+        if (numOfPlaSentence != 0.0){
+            finalscore = totalScore / numOfPlaSentence;
+        }
+        testResult.setFinalScore(finalscore);
         return new ParagraphResult[]{originResult, testResult};
     }
 
