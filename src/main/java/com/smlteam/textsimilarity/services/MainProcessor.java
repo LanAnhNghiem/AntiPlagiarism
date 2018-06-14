@@ -44,8 +44,6 @@ public class MainProcessor {
                     testResult.getLstSentence().add(new SentenceResult(testContent.get(i), result, "yes", i));
                     originResult.getLstSentence().add(new SentenceResult(docO, result, "yes", i));
 
-                    System.out.println(testContent.get(i));
-
                     numOfPlaSentence++;
                     totalScore += result;
                     break;
@@ -110,7 +108,7 @@ public class MainProcessor {
 
     public static void main(String[] args) {
 
-        new MainProcessor().compare(false);
+        new MainProcessor().compare(true);
 //        Preprocesser preprocesser = new Preprocesser(false);
 //        List<String> originContent = preprocesser.getPureContentFromFile(Constants.ORIGIN);
 //        List<String> testContent = preprocesser.getPureContentFromFile(Constants.TEST);

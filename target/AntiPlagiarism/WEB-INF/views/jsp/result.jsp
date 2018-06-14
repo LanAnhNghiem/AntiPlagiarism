@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,16 +25,36 @@
             <div class="row text-left" style="margin-left: 8%">
                 <div class="col-md-5" style="margin-right: 2%">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px">TEXT 1</div>
-
-                    <p style="font-size: 17px">Seems a little overkill for styling a single button, no? With border, padding, background, and other CSS effects you can style buttons and links to look similar without bringing over an entire framework. The methodology Bootstrap uses is good, however using Bootstrap seems excessive.</p>
+                        <table class="table table-striped table-hover">
+                            <tr>
+                                <th>Sentences</th>
+                                <th>Score</th>
+                            </tr>
+                            <c:forEach items="${testPragraphResult}" var="testResult">
+                            <tr>
+                                <td>${testResult.getSentenceContent()}</td>
+                                <td>${testResult.getScore()}</td>
+                            </tr>
+                            </c:forEach>
+                        </table>
                 </div>
 
                 <hr class="col-md-1" style="border: none; border-left: 1px solid hsla(200, 10%, 50%,100); height: 45vh; width: 1px">
 
                 <div class="col-md-5">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px">TEXT 2</div>
-
-                    <p style="font-size: 17px">I'm not sure why this hasn't got more upvotes, to be honest. It works exactly as I need, and I did it this way because I wanted search engine spiders to be able to spot and follow the link. With JS that probably wouldn't have happened, and I'm not too sure of search engine behaviour when it comes to forms. It also doesn't result in any layout or behavioural side-effects.</p>
+                    <table class="table table-striped table-hover">
+                        <tr>
+                            <th>Sentences</th>
+                            <th>Score</th>
+                        </tr>
+                        <c:forEach items="${orinPragraphResult}" var="orinResult">
+                            <tr>
+                                <td>${orinResult.getSentenceContent()}</td>
+                                <td>${orinResult.getScore()}</td>
+                            </tr>
+                        </c:forEach>
+                    </table>
                 </div>
             </div>
         </div>

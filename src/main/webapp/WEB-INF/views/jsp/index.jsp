@@ -122,9 +122,9 @@
         <script src="scripts/ng-dropzone.js"></script>
         <script src='scripts/compareTwoFiles.js'></script>
         <script>
-            document.getElementById("btnSubmit").onclick = function() {
-                document.getElementById("formSubmit").submit();
-            }
+            $("#btnSubmit").click(function() {
+                $("#formSubmit").submit();
+            })
         </script>
     </div>
 </div>
