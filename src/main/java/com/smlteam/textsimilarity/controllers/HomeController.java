@@ -48,8 +48,16 @@ public class HomeController {
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public String multiFileUpload(@RequestParam("files") MultipartFile[] files,
                                   RedirectAttributes redirectAttributes) {
-        //Lưu file
-        MainProcessor.saveFile(files);
+
+        try {
+            MainProcessor.saveFile(files);
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("resultColor", "red");
+            redirectAttributes.addFlashAttribute("resultMess", "Empty file");
+            return "redirect:/result";
+        }
+
+
         ParagraphResult listResult = new MainProcessor().compare(false);
         redirectAttributes.addFlashAttribute("finalScore", new DecimalFormat("#.##").format(listResult.getFinalScore() * 100));
         if (listResult.getFinalScore() > 0.5) {

@@ -57,7 +57,7 @@
                                     <p style="font-size: 17px">
                                         Click to upload <span><strong>file 1</strong></span><br>
 
-                                        <input type="file" name="files" size="50"
+                                        <input required="required" type="file" name="files" size="50"
                                                accept=".txt,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                                                style="margin-top: 3px">
                                     </p>
@@ -86,7 +86,7 @@
                                     <p style="font-size: 17px">
                                         Click to upload <span><strong>file 2</strong></span><br>
 
-                                        <input type="file" name="files" size="50"
+                                        <input required="required" type="file" name="files" size="50"
                                                accept=".txt,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                                                style="margin-top: 3px">
                                     </p>
@@ -104,8 +104,9 @@
 
                 <div class="row text-center">
                     <a class="btn btn-success btn-lg" id="btnSubmit"><strong><i
-                            class="fas fa-filter"></i>&nbsp;COMPARE</strong></a>
+                            class="fas fa-filter"></i>&nbsp;COMPARE</strong><input type="submit" style="display: none"></a>
                 </div>
+                <input value="OK" type="submit" style="display: none" id="btnOK">
             </div>
         </form>
         <script src="scripts/fontawesome-all.js"></script>
@@ -123,7 +124,7 @@
         <script src='scripts/compareTwoFiles.js'></script>
         <script>
             $("#btnSubmit").click(function() {
-                $("#formSubmit").submit();
+                $("#btnOK").click();
             })
         </script>
     </div>
