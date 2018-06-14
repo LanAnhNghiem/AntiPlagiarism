@@ -23,33 +23,22 @@
             </div>
 
             <div class="row text-left" style="margin-left: 8%">
-                <div class="col-md-5" style="margin-right: 2%">
-                    <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px">TEXT 1</div>
+                <div class="col-md-12" style="margin-right: 2%">
+                    <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px">RESULT</div>
                         <table class="table table-striped table-hover">
                             <tr>
-                                <th>Sentences</th>
+                                <th>Test</th>
+                                <th>Origin</th>
                                 <th>Score</th>
                             </tr>
                             <c:forEach items="${testPragraphResult}" var="testResult">
                             <tr>
-                                <td>${testResult.getSentenceContent()}</td>
+                                <td>${testResult.getTestSentenceContent()}</td>
+                                <td>${testResult.getOriSentenceContent()}</td>
                                 <td>${testResult.getScore()}</td>
                             </tr>
                             </c:forEach>
                         </table>
-                </div>
-                <div class="col-md-5">
-                    <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px">TEXT 2</div>
-                    <table class="table table-striped table-hover">
-                        <tr>
-                            <th>Sentences</th>
-                        </tr>
-                        <c:forEach items="${orinPragraphResult}" var="orinResult">
-                            <tr>
-                                <td>${orinResult.getSentenceContent()}</td>
-                            </tr>
-                        </c:forEach>
-                    </table>
                 </div>
             </div>
         </div>

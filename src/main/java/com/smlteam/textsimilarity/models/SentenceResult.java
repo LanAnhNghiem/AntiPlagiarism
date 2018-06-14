@@ -1,17 +1,18 @@
 package com.smlteam.textsimilarity.models;
 
 public class SentenceResult {
-    private String sentenceContent;
+    private String testSentenceContent;
     private Double score;
     private String isPlagiarism;
+    private String oriSentenceContent;
     private int id;
 
-    public String getSentenceContent() {
-        return sentenceContent;
+    public String getTestSentenceContent() {
+        return testSentenceContent;
     }
 
-    public void setSentenceContent(String sentenceContent) {
-        this.sentenceContent = sentenceContent;
+    public void setTestSentenceContent(String testSentenceContent) {
+        this.testSentenceContent = testSentenceContent;
     }
 
     public Double getScore() {
@@ -30,6 +31,14 @@ public class SentenceResult {
         this.isPlagiarism = isPlagiarism;
     }
 
+    public String getOriSentenceContent() {
+        return oriSentenceContent;
+    }
+
+    public void setOriSentenceContent(String oriSentenceContent) {
+        this.oriSentenceContent = oriSentenceContent;
+    }
+
     public int getId() {
         return id;
     }
@@ -38,10 +47,11 @@ public class SentenceResult {
         this.id = id;
     }
 
-    public SentenceResult(String sentenceContent, Double score, String isPlagiarism, int id) {
-        this.sentenceContent = sentenceContent;
+    public SentenceResult(String testSentenceContent, String oriSentenceContent, Double score, String isPlagiarism, int id) {
+        this.testSentenceContent = testSentenceContent;
         this.score = score;
         this.isPlagiarism = isPlagiarism;
+        this.oriSentenceContent = oriSentenceContent;
         this.id = id;
     }
 }

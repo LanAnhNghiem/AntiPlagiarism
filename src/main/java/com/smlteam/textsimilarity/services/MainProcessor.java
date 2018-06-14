@@ -16,13 +16,12 @@ import java.util.List;
 
 public class MainProcessor {
 
-    public ParagraphResult[] compare(boolean isEN) {
+    public ParagraphResult compare(boolean isEN) {
         Preprocesser preprocesser = new Preprocesser(isEN);
         List<String> originContent = preprocesser.getPureContentFromFile(Constants.ORIGIN);
         List<String> testContent = preprocesser.getPureContentFromFile(Constants.TEST);
 
-        ParagraphResult originResult = new ParagraphResult();
-        ParagraphResult testResult = new ParagraphResult();
+        ParagraphResult finalResult = new ParagraphResult();
 
         Indexer indexer = new Indexer();
         CalcTFIDF calcTFIDF = new CalcTFIDF();
@@ -41,8 +40,7 @@ public class MainProcessor {
                 System.out.print("Test: " + i + ", Origin: " + origin + ", % plagiarism: " + result + "\n");
                 //If is palagiarism
                 if (result > 0.5) {
-                    testResult.getLstSentence().add(new SentenceResult(testContent.get(i), result, "yes", i));
-                    originResult.getLstSentence().add(new SentenceResult(docO, result, "yes", i));
+                    finalResult.getLstSentence().add(new SentenceResult(testContent.get(i), docO, result, "yes", i));
 
                     numOfPlaSentence++;
                     totalScore += result;
@@ -56,8 +54,8 @@ public class MainProcessor {
             finalscore = totalScore / numOfPlaSentence;
         }
         System.out.println("FINAL SCORE: " + finalscore);
-        testResult.setFinalScore(finalscore);
-        return new ParagraphResult[]{originResult, testResult};
+        finalResult.setFinalScore(finalscore);
+        return finalResult;
     }
 
     public static void saveFile(MultipartFile[] files) {

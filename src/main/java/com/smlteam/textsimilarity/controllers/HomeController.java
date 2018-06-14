@@ -50,9 +50,9 @@ public class HomeController {
                                   RedirectAttributes redirectAttributes) {
         //Lưu file
         MainProcessor.saveFile(files);
-        ParagraphResult[] listResult = new MainProcessor().compare(false);
-        redirectAttributes.addFlashAttribute("finalScore", new DecimalFormat("#.##").format(listResult[1].getFinalScore() * 100));
-        if (listResult[1].getFinalScore() > 0.5) {
+        ParagraphResult listResult = new MainProcessor().compare(false);
+        redirectAttributes.addFlashAttribute("finalScore", new DecimalFormat("#.##").format(listResult.getFinalScore() * 100));
+        if (listResult.getFinalScore() > 0.5) {
             redirectAttributes.addFlashAttribute("resultColor", "red");
             redirectAttributes.addFlashAttribute("resultMess", "Plagiarism");
 
@@ -61,8 +61,7 @@ public class HomeController {
             redirectAttributes.addFlashAttribute("resultMess", "No Plagiarism");
         }
 
-        redirectAttributes.addFlashAttribute("testPragraphResult", listResult[1].getLstSentence());
-        redirectAttributes.addFlashAttribute("orinPragraphResult", listResult[0].getLstSentence());
+        redirectAttributes.addFlashAttribute("testPragraphResult", listResult.getLstSentence());
 
         return "redirect:/result";
     }
