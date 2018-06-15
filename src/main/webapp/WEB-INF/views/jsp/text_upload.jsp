@@ -30,14 +30,12 @@
                     <div class="col-xs-12">
                         <section layout="row" layout-align="center center">
                             <a href="/AntiPlagiarism/">
-                                <md-button class="groupX left md-raised"
-                                           ng-click="selectedScanSourceTypes='file';resetStep()"
-                                           ng-class="{'md-accent': selectedScanSourceTypes=='file'}"><strong><i
+                                <md-button class="groupX right md-raised md-button md-ink-ripple"><strong><i
                                         class="fas fa-paperclip"></i>&nbsp;&nbsp;File<a href="/AntiPlagiarism/"></a></strong></md-button>
                             </a>
 
 
-                            <md-button class="groupX right md-raised"
+                            <md-button class="groupX right md-raised md-button md-ink-ripple md-accent"
                                        ng-click="selectedScanSourceTypes='text';resetStep()"
                                        ng-class="{'md-accent': selectedScanSourceTypes=='text'}"><strong><i
                                     class="far fa-file-alt"></i>&nbsp;&nbsp;Text</strong><a href=""></a></md-button>
@@ -124,7 +122,7 @@
         <script src="scripts/angular-material.js"></script>
         <script src="scripts/ui-bootstrap.min.js"></script>
         <script src="scripts/ng-dropzone.js"></script>
-        <script src='scripts/compareTwoFiles.js'></script>
+        <script src='scripts/compareTwoTexts.js'></script>
         <script>
             $("#btnSubmit").click(function() {
                 $("#btnOK").click();
