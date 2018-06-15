@@ -54,18 +54,9 @@
                             </div>
 
                             <div class="panel-body" ng-switch="selectedScanSourceTypes">
-                                <div ng-switch-when="file" class="parent-center">
-                                    <p style="font-size: 17px">
-                                        Click to upload <span><strong>file 1</strong></span><br>
-
-                                        <input required="required" type="file" name="files" size="50"
-                                               accept=".txt,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                                               style="margin-top: 3px">
-                                    </p>
-                                </div>
 
                                 <div class="form-group" ng-switch-when="text">
-                                    <textarea class="form-control" ng-model="formData.source_text" rows="100"
+                                    <textarea required="required" class="form-control" ng-model="formData.source_text" rows="100"
                                               placeholder="Write your text here" ng-change="resetStep()"
                                               style="font-size: 18px; height: 206px; border-radius: 8px; resize: none"></textarea>
                                 </div>
@@ -83,18 +74,9 @@
                             </div>
 
                             <div class="panel-body" ng-switch="selectedScanSourceTypes">
-                                <div ng-switch-when="file" class="parent-center">
-                                    <p style="font-size: 17px">
-                                        Click to upload <span><strong>file 2</strong></span><br>
-
-                                        <input required="required" type="file" name="files" size="50"
-                                               accept=".txt,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                                               style="margin-top: 3px">
-                                    </p>
-                                </div>
 
                                 <div class="form-group" ng-switch-when="text">
-                                    <textarea class="form-control" ng-model="formData.suspected_text" rows="100"
+                                    <textarea required="required" class="form-control" ng-model="formData.suspected_text" rows="100"
                                               placeholder="Write your text here" ng-change="resetStep()"
                                               style="font-size: 18px; height: 206px; border-radius: 8px; resize: none"></textarea>
                                 </div>

@@ -63,11 +63,11 @@
                                     </p>
                                 </div>
 
-                                <div class="form-group" ng-switch-when="text">
-                                    <textarea class="form-control" ng-model="formData.source_text" rows="100"
-                                              placeholder="Write your text here" ng-change="resetStep()"
-                                              style="font-size: 18px; height: 206px; border-radius: 8px; resize: none"></textarea>
-                                </div>
+                                <%--<div class="form-group" ng-switch-when="text">--%>
+                                    <%--<textarea class="form-control" ng-model="formData.source_text" rows="100"--%>
+                                              <%--placeholder="Write your text here" ng-change="resetStep()"--%>
+                                              <%--style="font-size: 18px; height: 206px; border-radius: 8px; resize: none"></textarea>--%>
+                                <%--</div>--%>
                             </div>
                         </div>
                     </div>
@@ -92,11 +92,11 @@
                                     </p>
                                 </div>
 
-                                <div class="form-group" ng-switch-when="text">
-                                    <textarea class="form-control" ng-model="formData.suspected_text" rows="100"
-                                              placeholder="Write your text here" ng-change="resetStep()"
-                                              style="font-size: 18px; height: 206px; border-radius: 8px; resize: none"></textarea>
-                                </div>
+                                <%--<div class="form-group" ng-switch-when="text">--%>
+                                    <%--<textarea class="form-control" ng-model="formData.suspected_text" rows="100"--%>
+                                              <%--placeholder="Write your text here" ng-change="resetStep()"--%>
+                                              <%--style="font-size: 18px; height: 206px; border-radius: 8px; resize: none"></textarea>--%>
+                                <%--</div>--%>
                             </div>
                         </div>
                     </div>
