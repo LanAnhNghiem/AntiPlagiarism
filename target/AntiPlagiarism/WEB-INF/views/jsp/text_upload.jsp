@@ -24,7 +24,7 @@
             </div>
         </div>
         <hr/>
-        <form action="upload" method="post" enctype="multipart/form-data" id="formSubmit">
+        <form action="text_upload" method="post" enctype="multipart/form-data" id="formSubmit">
             <div ng-cloak ng-show="step != STEP_PROGRESS">
                 <div class="row text-left margin-bottom" style="margin-bottom: 15px">
                     <div class="col-xs-12">
@@ -56,7 +56,7 @@
                             <div class="panel-body" ng-switch="selectedScanSourceTypes">
 
                                 <div class="form-group" ng-switch-when="text">
-                                    <textarea required="required" class="form-control" ng-model="formData.source_text" rows="100"
+                                    <textarea name="testText" required="required" class="form-control" ng-model="formData.source_text" rows="100"
                                               placeholder="Write your text here" ng-change="resetStep()"
                                               style="font-size: 18px; height: 206px; border-radius: 8px; resize: none"></textarea>
                                 </div>
@@ -76,7 +76,7 @@
                             <div class="panel-body" ng-switch="selectedScanSourceTypes">
 
                                 <div class="form-group" ng-switch-when="text">
-                                    <textarea required="required" class="form-control" ng-model="formData.suspected_text" rows="100"
+                                    <textarea name="oriText" required="required" class="form-control" ng-model="formData.suspected_text" rows="100"
                                               placeholder="Write your text here" ng-change="resetStep()"
                                               style="font-size: 18px; height: 206px; border-radius: 8px; resize: none"></textarea>
                                 </div>
