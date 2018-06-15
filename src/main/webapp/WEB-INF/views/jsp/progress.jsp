@@ -39,7 +39,6 @@
 
             <h1>Please wait a moment</h1>
         </div>
-
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="scripts/plugin.js"></script>
         <script src="scripts/script.js"></script>

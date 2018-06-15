@@ -38,7 +38,7 @@ public class HomeController {
         return "help";
     }
 
-    @PostMapping(value = "/progress")
+    @RequestMapping(value = "/progress")
     public String progress() {
         return "progress";
     }
@@ -55,11 +55,17 @@ public class HomeController {
         if(language.equalsIgnoreCase("en")){
             isEN = true;
         }
+        if (files[0].isEmpty() || files[1].isEmpty()){
+            redirectAttributes.addFlashAttribute("finalScore", "0");
+            redirectAttributes.addFlashAttribute("resultColor", "green");
+            redirectAttributes.addFlashAttribute("resultMess", "No Plagiarism");
+            return "redirect:/result";
+        }
         try {
             MainProcessor.saveFile(files);
         } catch (Exception e) {
             redirectAttributes.addFlashAttribute("resultColor", "red");
-            redirectAttributes.addFlashAttribute("resultMess", "Uploaded file must be not empty");
+            redirectAttributes.addFlashAttribute("resultMess", "Uploading error !");
             return "redirect:/result";
         }
 
