@@ -49,9 +49,12 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public String multiFileUpload(@RequestParam("files") MultipartFile[] files,
+    public String multiFileUpload(@RequestParam("files") MultipartFile[] files, @RequestParam("isEN") String language,
                                   RedirectAttributes redirectAttributes) {
-
+        boolean isEN = false;
+        if(language.equalsIgnoreCase("en")){
+            isEN = true;
+        }
         try {
             MainProcessor.saveFile(files);
         } catch (Exception e) {
@@ -61,7 +64,7 @@ public class HomeController {
         }
 
 
-        ParagraphResult listResult = new MainProcessor().compare(false);
+        ParagraphResult listResult = new MainProcessor().compare(isEN);
         redirectAttributes.addFlashAttribute("finalScore", new DecimalFormat("#.##").format(listResult.getFinalScore() * 100));
         if (listResult.getFinalScore() > 0.5) {
             redirectAttributes.addFlashAttribute("resultColor", "red");
@@ -83,8 +86,11 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/text_upload", method = RequestMethod.POST)
-    public String textProcess(@RequestParam("testText") String testText, @RequestParam("oriText") String oriText, RedirectAttributes redirectAttributes) {
-
+    public String textProcess(@RequestParam("testText") String testText, @RequestParam("oriText") String oriText, @RequestParam("isEN") String language, RedirectAttributes redirectAttributes) {
+        boolean isEN = false;
+        if(language.equalsIgnoreCase("en")){
+            isEN = true;
+        }
         //Write test file
         try {
             File file = new File(Constants.TEST);
@@ -110,7 +116,7 @@ public class HomeController {
         }
 
         //Main processing
-        ParagraphResult listResult = new MainProcessor().compare(false);
+        ParagraphResult listResult = new MainProcessor().compare(isEN);
         redirectAttributes.addFlashAttribute("finalScore", new DecimalFormat("#.##").format(listResult.getFinalScore() * 100));
         if (listResult.getFinalScore() > 0.5) {
             redirectAttributes.addFlashAttribute("resultColor", "red");

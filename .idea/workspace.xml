@@ -9,13 +9,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e8237762-ece3-4c6b-9385-af23259a45b6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/test/origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/origin.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/test/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/text_upload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/text_upload.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/controllers/HomeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/test/origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/test/origin.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/test/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/test/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/text_upload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/text_upload.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/HomeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/test/origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/origin.txt" afterDir="false" />
@@ -31,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="84" column="41" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="41" />
+            <state relative-caret-position="101">
+              <caret line="118" column="69" selection-start-line="118" selection-start-column="69" selection-end-line="118" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2607#2608#0" expanded="true" />
@@ -99,8 +102,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1360">
-              <caret line="28" column="85" lean-forward="true" selection-start-line="28" selection-start-column="85" selection-end-line="28" selection-end-column="85" />
+            <state relative-caret-position="119">
+              <caret line="43" column="35" lean-forward="true" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#strong#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -117,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text_upload.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="text_upload.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/text_upload.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="78" column="59" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="59" />
+            <state relative-caret-position="94">
+              <caret line="48" column="87" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
               <folding>
                 <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#strong#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -202,10 +205,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/models/SentenceResult.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/result.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/scripts/compareTwoTexts.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/services/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/text_upload.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" />
       </list>
     </option>
   </component>
@@ -487,7 +490,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121436000" />
+    <option name="totallyTimeSpent" value="123237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -506,7 +509,7 @@
       <window_info anchor="right" id="JSF" order="5" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4419714" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4419714" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3290938" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -514,7 +517,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.4228935" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926794" weight="0.4228935" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17862372" />
@@ -567,7 +570,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="89" />
+      <option name="time" value="92" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -864,25 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1360">
-          <caret line="28" column="85" lean-forward="true" selection-start-line="28" selection-start-column="85" selection-end-line="28" selection-end-column="85" />
-          <folding>
-            <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#strong#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#strong#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#a#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/services/Indexer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -910,22 +894,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="84" column="41" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2607#2608#0" expanded="true" />
-            <element signature="e#2643#2644#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/text_upload.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="78" column="59" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="59" />
+        <state relative-caret-position="94">
+          <caret line="48" column="87" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
           <folding>
             <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#strong#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -935,6 +907,37 @@
             <element signature="n#style#0;n#textarea#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#a#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="43" column="35" lean-forward="true" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#a#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="118" column="69" selection-start-line="118" selection-start-column="69" selection-end-line="118" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2607#2608#0" expanded="true" />
+            <element signature="e#2643#2644#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -38,11 +38,17 @@
                             <md-button class="groupX right md-raised md-button md-ink-ripple md-accent"
                                        ng-click="selectedScanSourceTypes='text';resetStep()"
                                        ng-class="{'md-accent': selectedScanSourceTypes=='text'}"><strong><i
-                                    class="far fa-file-alt"></i>&nbsp;&nbsp;Text</strong><a href=""></a></md-button>
+                                    class="far fa-file-alt"></i>&nbsp;&nbsp;Text</strong><a href=""></a>
+                            </md-button>
+
+
                         </section>
                     </div>
                 </div>
-
+                <div class="radio">
+                    <label><input type="radio" name="isEN" value="en" checked="checked">EN</label>
+                    <label><input type="radio" name="isEN" value="vn">VI</label>
+                </div>
                 <div class="row text-left">
                     <div class="col-xs-12 col-md-6">
                         <div class="panel panel-default col-xs-12 col-md-12">

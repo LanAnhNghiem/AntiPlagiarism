@@ -41,7 +41,10 @@
                         </section>
                     </div>
                 </div>
-
+                <div class="radio">
+                    <label><input type="radio" name="isEN" value="en" checked="checked">EN</label>
+                    <label><input type="radio" name="isEN" value="vn">VI</label>
+                </div>
                 <div class="row text-left">
                     <div class="col-xs-12 col-md-6">
                         <div class="panel panel-default col-xs-12 col-md-12">
