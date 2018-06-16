@@ -14,7 +14,10 @@
 <div class="container">
     <div ng-app="compare" ng-controller="compare-controller" class="container compare-container">
         <div class="row" style="margin-top: 10px">
-            <h1 class="col-md-9"><i class="fas fa-file-alt"></i>&nbsp;&nbsp;Compare Two Documents</h1>
+            <a href="<%=request.getContextPath()%>">
+                <h1 class="col-md-9"><i class="fas fa-file-alt"></i>&nbsp;&nbsp;Compare Two Documents</h1>
+
+            </a>
 
             <div class="row col-md-3" style="font-size: 20px; margin-top: 28px">
                 <a href="about" style="color: #049DFF; text-decoration: none"><i class="fas fa-users"></i>
@@ -29,7 +32,7 @@
                 <div class="row text-left margin-bottom" style="margin-bottom: 15px">
                     <div class="col-xs-12">
                         <section layout="row" layout-align="center center">
-                            <a href="/AntiPlagiarism/">
+                            <a href="<%=request.getContextPath()%>">
                                 <md-button class="groupX right md-raised md-button md-ink-ripple"><strong><i
                                         class="fas fa-paperclip"></i>&nbsp;&nbsp;File<a href="/AntiPlagiarism/"></a></strong></md-button>
                             </a>

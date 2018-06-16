@@ -16,7 +16,9 @@
         <div class="container">
             <div ng-app="compare" ng-controller="compare-controller" class="container compare-container">
                 <div class="row" style="margin-top: 10px">
-                    <h1 class="col-md-9"><i class="fas fa-file-alt"></i>&nbsp;&nbsp;Compare Two Documents</h1>
+                    <a href="<%=request.getContextPath()%>">
+                        <h1 class="col-md-9"><i class="fas fa-file-alt"></i>&nbsp;&nbsp;Compare Two Documents</h1>
+                    </a>
 
                     <div class="row col-md-3" style="font-size: 20px; margin-top: 28px">
                         <a href="about" style="color: #049DFF; text-decoration: none"><i class="fas fa-users"></i> &nbsp;About</a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -43,7 +45,7 @@
                     </ul>
                 </div>
                 <div class="col-md-5 contact-top">
-                    <h3>Connect with us - SMLTeam</h3>
+                    <h3>Contact with us - SMLTeam</h3>
                    
                     <div class="member_team">
                         <img src="images/1.png" width="80" height="80" alt="back"/>
