@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -22,6 +23,7 @@ import java.util.StringJoiner;
 
 @Controller
 public class HomeController {
+    ServletContext context;
     @RequestMapping(value = "/")
     public String home(ModelMap model) {
         model.addAttribute("A", "3");
@@ -51,6 +53,12 @@ public class HomeController {
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public String multiFileUpload(@RequestParam("files") MultipartFile[] files, @RequestParam("isEN") String language,
                                   RedirectAttributes redirectAttributes) {
+        try {
+            String content = new String(files[0].getBytes(), "UTF-8");
+            String a = "";
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         boolean isEN = false;
         if(language.equalsIgnoreCase("en")){
             isEN = true;

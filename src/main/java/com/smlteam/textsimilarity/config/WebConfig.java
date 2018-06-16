@@ -21,7 +21,7 @@ public class WebConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    public InternalResourceViewResolver resolver(){
+    public InternalResourceViewResolver resolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setViewClass(JstlView.class);
         resolver.setPrefix("/WEB-INF/views/jsp/");
@@ -30,7 +30,7 @@ public class WebConfig implements WebMvcConfigurer {
     }
 
     @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry){
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/styles/**").addResourceLocations("/styles/").setCachePeriod(31556926);
         registry.addResourceHandler("/images/**").addResourceLocations("/images/").setCachePeriod(31556926);
         registry.addResourceHandler("/scripts/**").addResourceLocations("/scripts/").setCachePeriod(31556926);

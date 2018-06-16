@@ -5,6 +5,7 @@ import com.smlteam.textsimilarity.models.SentenceResult;
 import org.springframework.web.multipart.MultipartFile;
 import sun.applet.Main;
 
+import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -61,7 +62,7 @@ public class MainProcessor {
     }
 
     public static void saveFile(MultipartFile[] files) {
-        String UPLOADED_FOLDER = "src/main/resources/test";
+        String UPLOADED_FOLDER = "/src/main/resources/test";
 
         //Save test file
         if (files[0].isEmpty()) {
