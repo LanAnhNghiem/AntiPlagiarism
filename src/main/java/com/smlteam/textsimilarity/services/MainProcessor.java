@@ -17,12 +17,12 @@ import java.util.List;
 
 public class MainProcessor {
 
-    public ParagraphResult compare(boolean isEN) {
+    public ParagraphResult compare(boolean isEN, String testString, String oriString) {
         Preprocesser preprocesser = new Preprocesser(isEN);
-        List<String> originContent = preprocesser.getPureContentFromFile(Constants.ORIGIN);
+        List<String> originContent = preprocesser.getPureContentFromFile(oriString);
         List<String> originResult = preprocesser.getOriginSentences();
 
-        List<String> testContent = preprocesser.getPureContentFromFile(Constants.TEST);
+        List<String> testContent = preprocesser.getPureContentFromFile(testString);
         List<String> testResult = preprocesser.getOriginSentences();
 
         ParagraphResult finalResult = new ParagraphResult();
@@ -109,7 +109,7 @@ public class MainProcessor {
 
     public static void main(String[] args) {
 
-        new MainProcessor().compare(true);
+//        new MainProcessor().compare(true);
 //        Preprocesser preprocesser = new Preprocesser(false);
 //        List<String> originContent = preprocesser.getPureContentFromFile(Constants.ORIGIN);
 //        List<String> testContent = preprocesser.getPureContentFromFile(Constants.TEST);

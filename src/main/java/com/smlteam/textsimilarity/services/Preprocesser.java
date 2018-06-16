@@ -43,7 +43,7 @@ public class Preprocesser {
     //file's content to list converting function
     public List<String> fileToList(String content) {
         List<String> arrContent;
-        originSentences.addAll(Arrays.asList(content.split(".")));
+        originSentences.addAll(Arrays.asList(content.split("\\.")));
         content = removeUrl(content);
         content = removeSpecialChar(content);
         arrContent = Arrays.asList(content.split("\\."));

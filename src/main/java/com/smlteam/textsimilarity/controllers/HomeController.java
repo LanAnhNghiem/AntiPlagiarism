@@ -53,9 +53,11 @@ public class HomeController {
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public String multiFileUpload(@RequestParam("files") MultipartFile[] files, @RequestParam("isEN") String language,
                                   RedirectAttributes redirectAttributes) {
+        String testString = "";
+        String oriString = "";
         try {
-            String content = new String(files[0].getBytes(), "UTF-8");
-            String a = "";
+            testString = new String(files[0].getBytes(), "UTF-8");
+            oriString = new String(files[1].getBytes(), "UTF-8");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -69,16 +71,16 @@ public class HomeController {
             redirectAttributes.addFlashAttribute("resultMess", "No Plagiarism");
             return "redirect:/result";
         }
-        try {
-            MainProcessor.saveFile(files);
-        } catch (Exception e) {
-            redirectAttributes.addFlashAttribute("resultColor", "red");
-            redirectAttributes.addFlashAttribute("resultMess", "Uploading error !");
-            return "redirect:/result";
-        }
+//        try {
+//            MainProcessor.saveFile(files);
+//        } catch (Exception e) {
+//            redirectAttributes.addFlashAttribute("resultColor", "red");
+//            redirectAttributes.addFlashAttribute("resultMess", "Uploading error !");
+//            return "redirect:/result";
+//        }
 
 
-        ParagraphResult listResult = new MainProcessor().compare(isEN);
+        ParagraphResult listResult = new MainProcessor().compare(isEN, testString, oriString);
         redirectAttributes.addFlashAttribute("finalScore", new DecimalFormat("#.##").format(listResult.getFinalScore() * 100));
         if (listResult.getFinalScore() > 0.5) {
             redirectAttributes.addFlashAttribute("resultColor", "red");
@@ -105,32 +107,32 @@ public class HomeController {
         if(language.equalsIgnoreCase("en")){
             isEN = true;
         }
-        //Write test file
-        try {
-            File file = new File(Constants.TEST);
-            FileWriter writer = new FileWriter(file);
-            writer.write(testText);
-            writer.close();
-        } catch (IOException e) {
-            redirectAttributes.addFlashAttribute("resultColor", "red");
-            redirectAttributes.addFlashAttribute("resultMess", "Error - TEST");
-            return "redirect:/result";
-        }
-
-        //Rite origin file
-        try {
-            File file = new File(Constants.ORIGIN);
-            FileWriter writer = new FileWriter(file);
-            writer.write(oriText);
-            writer.close();
-        } catch (IOException e) {
-            redirectAttributes.addFlashAttribute("resultColor", "red");
-            redirectAttributes.addFlashAttribute("resultMess", "Error - ORIGIN");
-            return "redirect:/result";
-        }
+//        //Write test file
+//        try {
+//            File file = new File(Constants.TEST);
+//            FileWriter writer = new FileWriter(file);
+//            writer.write(testText);
+//            writer.close();
+//        } catch (IOException e) {
+//            redirectAttributes.addFlashAttribute("resultColor", "red");
+//            redirectAttributes.addFlashAttribute("resultMess", "Error - TEST");
+//            return "redirect:/result";
+//        }
+//
+//        //Rite origin file
+//        try {
+//            File file = new File(Constants.ORIGIN);
+//            FileWriter writer = new FileWriter(file);
+//            writer.write(oriText);
+//            writer.close();
+//        } catch (IOException e) {
+//            redirectAttributes.addFlashAttribute("resultColor", "red");
+//            redirectAttributes.addFlashAttribute("resultMess", "Error - ORIGIN");
+//            return "redirect:/result";
+//        }
 
         //Main processing
-        ParagraphResult listResult = new MainProcessor().compare(isEN);
+        ParagraphResult listResult = new MainProcessor().compare(isEN, testText, oriText);
         redirectAttributes.addFlashAttribute("finalScore", new DecimalFormat("#.##").format(listResult.getFinalScore() * 100));
         if (listResult.getFinalScore() > 0.5) {
             redirectAttributes.addFlashAttribute("resultColor", "red");
