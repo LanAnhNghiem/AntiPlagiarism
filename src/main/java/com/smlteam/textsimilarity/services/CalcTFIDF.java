@@ -25,7 +25,7 @@ public class CalcTFIDF {
             Term termInstance = new Term("contents", term);
             long termFreq = itr.totalTermFreq();
             long docCount = reader.docFreq(termInstance);
-            double tfidf = (double)termFreq/ termVector.size();
+            double tfidf = ((double)termFreq/ termVector.size())*(1+Math.log((1+2)/(1+docCount)));
             vector.put(termText, tfidf);
 //            System.out.println("term: "+termText+", termFreq = "+termFreq+", docCount = "+docCount);
         }

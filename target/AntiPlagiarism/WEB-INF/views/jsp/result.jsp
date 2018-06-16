@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="container">
-            <a href="<%=request.getContextPath()%>"><img src="images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
+            <a href="/"><img src="images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
 
             <div class="row text-center" style="display: flex; align-items: center; justify-content: center; margin: 0px 0px 50px 0px">
                 <div class="row text-left">
@@ -31,11 +31,11 @@
                                 <th>Origin</th>
                                 <th>Score</th>
                             </tr>
-                            <c:forEach items="${testPragraphResult}" var="testResult">
+                            <c:forEach items="${request.setCharacterEncoding('UTF-8'); testPragraphResult}" var="testResult">
                             <tr>
-                                <td>${testResult.getTestSentenceContent()}</td>
-                                <td>${testResult.getOriSentenceContent()}</td>
-                                <td>${testResult.getScore()}%</td>
+                                <td>${request.setCharacterEncoding('UTF-8');testResult.getTestSentenceContent()}</td>
+                                <td>${request.setCharacterEncoding('UTF-8');testResult.getOriSentenceContent()}</td>
+                                <td>${request.setCharacterEncoding('UTF-8');testResult.getScore()}%</td>
                             </tr>
                             </c:forEach>
                         </table>

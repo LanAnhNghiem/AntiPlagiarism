@@ -16,7 +16,7 @@
         <div class="container">
             <div ng-app="compare" ng-controller="compare-controller" class="container compare-container">
                 <div class="row" style="margin-top: 10px">
-                    <a href="<%=request.getContextPath()%>">
+                    <a href="/">
                         <h1 class="col-md-9"><i class="fas fa-file-alt"></i>&nbsp;&nbsp;Compare Two Documents</h1>
                     </a>
 

@@ -14,7 +14,7 @@
 <div class="container">
     <div ng-app="compare" ng-controller="compare-controller" class="container compare-container">
         <div class="row" style="margin-top: 10px">
-            <a href="<%=request.getContextPath()%>">
+            <a href="/">
                 <h1 class="col-md-9"><i class="fas fa-file-alt"></i>&nbsp;&nbsp;Compare Two Documents</h1>
             </a>
 
@@ -34,7 +34,7 @@
                             <md-button class="groupX left md-raised"
                                        ng-click="selectedScanSourceTypes='file';resetStep()"
                                        ng-class="{'md-accent': selectedScanSourceTypes=='file'}"><strong><i
-                                    class="fas fa-paperclip"></i>&nbsp;&nbsp;File<a href="<%=request.getContextPath()%>"></a></strong></md-button>
+                                    class="fas fa-paperclip"></i>&nbsp;&nbsp;File<a href="/"></a></strong></md-button>
                             <a href="text">
                                 <md-button class="groupX right md-raised"><strong><i
                                     class="far fa-file-alt"></i>&nbsp;&nbsp;Text</strong><a href=""></a></md-button>

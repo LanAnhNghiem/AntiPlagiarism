@@ -11,22 +11,12 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.stream.Collectors;
 
 /**
  *
@@ -73,122 +63,6 @@ public class Indexer {
         }catch(IOException e){
             e.printStackTrace();
         }
-    }
-    public void indexer(List<List<String>> lstOrigin, List<List<String>> lstTest){
-        String indexPath = Constants.INDEX;
-
-        String docsPath = Constants.DOCS;
-
-        boolean create = true;
-
-        if(docsPath == null){
-            System.exit(1);
-        }
-
-        final Path docDir = Paths.get(docsPath);
-        try{
-            Directory dir = FSDirectory.open(Paths.get(indexPath));
-            Analyzer analyzer = new StandardAnalyzer();
-            IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
-
-            if (create) {
-                // Create a new index in the directory, removing any
-                // previously indexed documents:
-                iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
-            } else {
-                // Add new documents to an existing index:
-                iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND);
-            }
-            //set RAM size
-            iwc.setRAMBufferSizeMB(256.0);
-
-            IndexWriter writer = new IndexWriter(dir, iwc);
-
-            List<String> documents = new LinkedList<>();
-            for(List<String> docsT: lstTest){
-                for(String docT: docsT){
-                    documents.add(docT);
-                    for(List<String> docsO: lstOrigin){
-                        for(String docO: docsO){
-                            documents.add(docO);
-                        }
-                    }
-                }
-            }
-            indexDocs(writer, docDir, documents);
-            writer.close();
-        }catch(IOException e){
-            e.printStackTrace();
-        }
-    }
-    //Tách đoạn văn thành từ hoặc cụm từ
-    public static String tokenizer(String originPath){
-        List<String> doc = new LinkedList<>();
-        try {
-            Tokenizer tokenizer = new Tokenizer();
-            List<List<Token>> tokenList = Files.lines(Paths.get(originPath))
-                    .map(s-> tokenizer.tokenize(s))
-                    .collect(Collectors.toList());
-
-            for(List<Token> token : tokenList){
-                for(Token term: token){
-                    doc.add(term.getWord().replace(" ","_"));
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return doc.toString().replace("[","").replace("]","");
-    }
-
-    public static String tokenizer2(String path){
-        List<String> doc = new LinkedList<>();
-        List<Token> tokens = new LinkedList<>();
-        BufferedReader br = null;
-        FileReader fr = null;
-        Tokenizer tokenizer = new Tokenizer();
-        final ExecutorService executor = Executors.newFixedThreadPool(5);
-        final List<Future<?>> futures = new ArrayList<>();
-        try {
-            fr = new FileReader(path);
-            br = new BufferedReader(fr);
-            String line;
-            while((line = br.readLine()) != null){
-                tokens.addAll(tokenizer.tokenize(line));
-            }
-            for(Token token: tokens){
-                Future<?> future = executor.submit(() -> {
-                    doc.add(token.getWord().replace(" ","_"));
-                });
-                futures.add(future);
-
-            }
-            try {
-                for (Future<?> future : futures) {
-                    future.get(); // do anything you need, e.g. isDone(), ...
-                }
-            } catch (InterruptedException | ExecutionException e) {
-                e.printStackTrace();
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
-            try{
-                if(br != null){
-                    br.close();
-                }
-                if(fr != null){
-                    fr.close();
-                }
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-        }
-
-        return doc.toString().replace("[","").replace("]","");
     }
 
     //index một tập các văn bản

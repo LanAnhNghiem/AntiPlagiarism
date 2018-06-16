@@ -61,7 +61,7 @@ public class MainProcessor {
     }
 
     public static void saveFile(MultipartFile[] files) {
-        String UPLOADED_FOLDER = "C:\\Users\\Chuong\\Documents\\GitHub\\AntiPlagiarism\\src\\main\\resources\\test\\";
+        String UPLOADED_FOLDER = "src/main/resources/test";
 
         //Save test file
         if (files[0].isEmpty()) {
