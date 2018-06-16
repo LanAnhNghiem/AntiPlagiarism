@@ -19,14 +19,17 @@ public class MainProcessor {
     public ParagraphResult compare(boolean isEN) {
         Preprocesser preprocesser = new Preprocesser(isEN);
         List<String> originContent = preprocesser.getPureContentFromFile(Constants.ORIGIN);
+        List<String> originResult = preprocesser.getOriginSentences();
+
         List<String> testContent = preprocesser.getPureContentFromFile(Constants.TEST);
+        List<String> testResult = preprocesser.getOriginSentences();
 
         ParagraphResult finalResult = new ParagraphResult();
 
         Indexer indexer = new Indexer();
         CalcTFIDF calcTFIDF = new CalcTFIDF();
 
-        Double numOfPlaSentence = 0.0;
+        int numOfSentence = testContent.size();
         Double totalScore = 0.0;
 
         for (int i = 0; i < testContent.size(); i++) {
@@ -38,11 +41,10 @@ public class MainProcessor {
                 CosineSimilarity cs = new CosineSimilarity();
                 Double result = cs.calcCosine(listVector.get(0), listVector.get(1));
                 System.out.print("Test: " + i + ", Origin: " + origin + ", % plagiarism: " + result + "\n");
-                //If is palagiarism
+                //If is plagiarism
                 if (result > 0.5) {
-                    finalResult.getLstSentence().add(new SentenceResult(testContent.get(i), docO, result, "yes", i));
+                    finalResult.getLstSentence().add(new SentenceResult(testResult.get(i), originResult.get(i), result, "yes", i));
 
-                    numOfPlaSentence++;
                     totalScore += result;
                     break;
                 }
@@ -50,8 +52,8 @@ public class MainProcessor {
             }
         }
         Double finalscore = 0.0;
-        if (numOfPlaSentence != 0.0){
-            finalscore = totalScore / numOfPlaSentence;
+        if (numOfSentence != 0.0){
+            finalscore = totalScore / (double)numOfSentence;
         }
         System.out.println("FINAL SCORE: " + finalscore);
         finalResult.setFinalScore(finalscore);

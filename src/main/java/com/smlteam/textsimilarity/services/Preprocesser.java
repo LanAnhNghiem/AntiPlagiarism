@@ -2,6 +2,8 @@ package com.smlteam.textsimilarity.services;
 
 import ai.vitk.tok.Tokenizer;
 import ai.vitk.type.Token;
+import sun.plugin.javascript.navig.Array;
+
 import java.io.*;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -13,17 +15,20 @@ import java.util.regex.Pattern;
  */
 public class Preprocesser {
 
+    public ArrayList<String> getOriginSentences() {
+        return originSentences;
+    }
+
+    public void setOriginSentences(ArrayList<String> originSentences) {
+        this.originSentences = originSentences;
+    }
+
+    private ArrayList<String> originSentences = new ArrayList<>();
     private static boolean isEN = false;
     private ArrayList<String> lstStopwordEN = new ArrayList<>();
     private ArrayList<String> lstStopwordVN = new ArrayList<>();
 
     public Preprocesser(boolean isEN) {
-        this.isEN = isEN;
-        if (isEN) {
-            lstStopwordEN = readFile(Constants.STOPWORDS_EN);
-        } else {
-            lstStopwordVN = readFile(Constants.STOPWORDS_VN);
-        }
     }
 
     //    public static void main(String[] args) throws IOException, ParseException {
@@ -42,15 +47,16 @@ public class Preprocesser {
             //Tạo luồng và liên kết luồng
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             String line;
-            String doc = "";
+            String doc = "", origin = "";
 
             while ((line = br.readLine()) != null) {
+                origin += line;
                 String tmp = removeUrl(line);
                 tmp = removeSpecialChar(tmp);
                 doc += tmp;
             }
 //            String[] sentences = doc.split("\\.");
-
+            originSentences.addAll(Arrays.asList(origin.split(".")));
             arrContent = Arrays.asList(doc.split("\\."));
         } catch (IOException e) {
             e.printStackTrace();
@@ -66,8 +72,9 @@ public class Preprocesser {
             Tokenizer tokenizer = new Tokenizer();
             List<Token> tokenList = new LinkedList<>();
             List<String> lstWord = new ArrayList<>();
-            String doc = "";
+            String doc = "", origin = "";
             while ((line = br.readLine()) != null) {
+                origin += line;
                 String result = removeUrl(line);
                 result = removeSpecialChar(result);
                 String tmp = removeUrl(line);
@@ -75,6 +82,7 @@ public class Preprocesser {
                 tokenList.addAll(tokenizer.tokenize(result));
 
             }
+            originSentences.addAll(Arrays.asList(origin.split("\\.")));
             for(Token token: tokenList){
                 lstWord.add(token.getWord().replace(" ","_"));
             }

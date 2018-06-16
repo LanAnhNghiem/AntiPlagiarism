@@ -13,19 +13,19 @@
     </head>
     <body>
         <div class="container">
-            <a href="/AntiPlagiarism/"><img src="images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
+            <a href="/"><img src="images/back.png" width="40px" height="40px" style="margin-top: 20px"></a>
 
             <div class="row text-center" style="display: flex; align-items: center; justify-content: center; margin: 0px 0px 50px 0px">
                 <div class="row text-left">
                     <strong style="font-size: 40px; color: blue">${finalScore} %</strong><span style="font-size: 35px"> identical</span><br>
-                    <strong class="${resultColor}" style="padding-left: 20px">${resultMess}</strong>
+                    <strong class="${resultColor}">${resultMess}</strong>
                 </div>
             </div>
 
             <div class="row text-left" style="margin-left: 8%">
                 <div class="col-md-12" style="margin-right: 2%">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px">RESULT</div>
-                        <table class="table table-striped table-hover">
+                        <table class="table table-striped table-hover" style="width: 100%">
                             <tr>
                                 <th>Test</th>
                                 <th>Origin</th>
@@ -35,7 +35,7 @@
                             <tr>
                                 <td>${testResult.getTestSentenceContent()}</td>
                                 <td>${testResult.getOriSentenceContent()}</td>
-                                <td>${testResult.getScore()}</td>
+                                <td>${testResult.getScore()}%</td>
                             </tr>
                             </c:forEach>
                         </table>

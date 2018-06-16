@@ -1,5 +1,7 @@
 package com.smlteam.textsimilarity.models;
 
+import java.text.DecimalFormat;
+
 public class SentenceResult {
     private String testSentenceContent;
     private Double score;
@@ -15,8 +17,8 @@ public class SentenceResult {
         this.testSentenceContent = testSentenceContent;
     }
 
-    public Double getScore() {
-        return score;
+    public String getScore() {
+        return new DecimalFormat("#.##").format(score * 100);
     }
 
     public void setScore(Double score) {
