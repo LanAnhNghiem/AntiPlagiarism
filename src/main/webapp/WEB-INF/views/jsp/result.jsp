@@ -25,11 +25,11 @@
             <div class="row text-left" style="margin-left: 8%">
                 <div class="col-md-12" style="margin-right: 2%">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px">RESULT</div>
-                        <table class="table table-striped table-hover" style="width: 100%">
+                        <table class="table table-striped table-hover">
                             <tr>
-                                <th>Test</th>
-                                <th>Origin</th>
-                                <th>Score</th>
+                                <th class="col-md-5">Test</th>
+                                <th class="col-md-5">Origin</th>
+                                <th class="col-md-2">Score</th>
                             </tr>
                             <c:forEach items="${request.setCharacterEncoding('UTF-8'); testPragraphResult}" var="testResult">
                             <tr>

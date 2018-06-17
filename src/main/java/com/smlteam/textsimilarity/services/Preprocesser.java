@@ -43,9 +43,7 @@ public class Preprocesser {
     //file's content to list converting function
     public List<String> fileToList(String content) {
         List<String> arrContent;
-
         this.originSentences = new ArrayList<>();
-        this.originSentences.addAll(Arrays.asList(content.split("\\.")));
         originSentences.addAll(Arrays.asList(content.split("[.?]")));
         content = removeUrl(content);
         content = removeSpecialChar(content);
@@ -78,7 +76,6 @@ public class Preprocesser {
         List<String> lstWord = new ArrayList<>();
 
         this.originSentences = new ArrayList<>();
-        this.originSentences.addAll(Arrays.asList(content.split("\\.")));
         originSentences.addAll(Arrays.asList(content.split("[.?]")));
 
         content = removeUrl(content);
