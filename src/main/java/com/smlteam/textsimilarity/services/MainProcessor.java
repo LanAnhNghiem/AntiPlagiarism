@@ -33,7 +33,7 @@ public class MainProcessor {
         Indexer indexer = new Indexer();
         CalcTFIDF calcTFIDF = new CalcTFIDF();
 
-        int numOfSentence = testContent.size();
+        int numOfSentence = 0;
         Double totalScore = 0.0;
 
         for (int i = 0; i < testContent.size(); i++) {
@@ -47,9 +47,10 @@ public class MainProcessor {
                 System.out.print("Test: " + i + ", Origin: " + origin + ", % plagiarism: " + result + "\n");
                 //If is plagiarism
                 if (result > 0.5) {
-                    finalResult.getLstSentence().add(new SentenceResult(testResult.get(i), originResult.get(i), result, "yes", i));
+                    finalResult.getLstSentence().add(new SentenceResult(testResult.get(i), originResult.get(origin), result, "yes", i));
                     finalResult.setPla(true);
                     totalScore += result;
+                    numOfSentence++;
                 }
 
                 origin++;
