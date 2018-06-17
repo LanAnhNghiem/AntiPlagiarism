@@ -44,8 +44,8 @@ public class Preprocesser {
     public List<String> fileToList(String content) {
         List<String> arrContent;
 
-        originSentences = new ArrayList<>();
-        originSentences.addAll(Arrays.asList(content.split("\\.")));
+        this.originSentences = new ArrayList<>();
+        this.originSentences.addAll(Arrays.asList(content.split("\\.")));
         content = removeUrl(content);
         content = removeSpecialChar(content);
         arrContent = Arrays.asList(content.split("\\."));
@@ -76,8 +76,8 @@ public class Preprocesser {
         List<Token> tokenList = new LinkedList<>();
         List<String> lstWord = new ArrayList<>();
 
-        originSentences = new ArrayList<>();
-        originSentences.addAll(Arrays.asList(content.split("\\.")));
+        this.originSentences = new ArrayList<>();
+        this.originSentences.addAll(Arrays.asList(content.split("\\.")));
 
         content = removeUrl(content);
         content = removeSpecialChar(content);

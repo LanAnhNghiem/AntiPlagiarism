@@ -27,14 +27,14 @@
             </div>
         </div>
         <hr/>
-        <form action="text_upload" method="post" enctype="multipart/form-data" id="formSubmit" accept-charset="ISO-8859-1">
+        <form action="text_upload" method="post" enctype="multipart/form-data" id="formSubmit" accept-charset="UTF-8">
             <div ng-cloak ng-show="step != STEP_PROGRESS">
                 <div class="row text-left margin-bottom" style="margin-bottom: 15px">
                     <div class="col-xs-12">
                         <section layout="row" layout-align="center center">
                             <a href="/">
                                 <md-button class="groupX right md-raised md-button md-ink-ripple"><strong><i
-                                        class="fas fa-paperclip"></i>&nbsp;&nbsp;File<a href="/AntiPlagiarism/"></a></strong></md-button>
+                                        class="fas fa-paperclip"></i>&nbsp;&nbsp;File</strong></md-button>
                             </a>
 
 
