@@ -103,6 +103,10 @@ public class HomeController {
 
     @RequestMapping(value = "/text_upload", method = RequestMethod.POST)
     public String textProcess(@RequestParam("testText") String testText, @RequestParam("oriText") String oriText, @RequestParam("isEN") String language, RedirectAttributes redirectAttributes) {
+
+        String test = testText;
+        String ori = oriText;
+
         boolean isEN = false;
         if(language.equalsIgnoreCase("en")){
             isEN = true;
