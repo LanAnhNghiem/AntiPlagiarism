@@ -26,6 +26,7 @@ public class WebConfig implements WebMvcConfigurer {
         resolver.setViewClass(JstlView.class);
         resolver.setPrefix("/WEB-INF/views/jsp/");
         resolver.setSuffix(".jsp");
+        resolver.setContentType("text/html;charset=UTF-8");
         return resolver;
     }
 
@@ -34,6 +35,13 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/styles/**").addResourceLocations("/styles/").setCachePeriod(31556926);
         registry.addResourceHandler("/images/**").addResourceLocations("/images/").setCachePeriod(31556926);
         registry.addResourceHandler("/scripts/**").addResourceLocations("/scripts/").setCachePeriod(31556926);
+    }
+    @Bean
+    public org.springframework.web.filter.CharacterEncodingFilter characterEncodingFilter() {
+        org.springframework.web.filter.CharacterEncodingFilter characterEncodingFilter = new org.springframework.web.filter.CharacterEncodingFilter();
+        characterEncodingFilter.setEncoding("UTF-8");
+        characterEncodingFilter.setForceEncoding(true);
+        return characterEncodingFilter;
     }
 //
 //    @Bean(name = "multipartResolver")

@@ -47,8 +47,8 @@ public class MainProcessor {
                     finalResult.getLstSentence().add(new SentenceResult(testResult.get(i), originResult.get(i), result, "yes", i));
                     finalResult.setPla(true);
                     totalScore += result;
-                    break;
                 }
+
                 origin++;
             }
         }

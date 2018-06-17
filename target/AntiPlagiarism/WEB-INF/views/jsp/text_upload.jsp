@@ -1,4 +1,5 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +28,7 @@
             </div>
         </div>
         <hr/>
-        <form action="text_upload" method="post" enctype="multipart/form-data" id="formSubmit" accept-charset="ISO-8859-1">
+        <form action="text_upload" method="post" enctype="multipart/form-data" id="formSubmit" accept-charset="UTF-8">
             <div ng-cloak ng-show="step != STEP_PROGRESS">
                 <div class="row text-left margin-bottom" style="margin-bottom: 15px">
                     <div class="col-xs-12">

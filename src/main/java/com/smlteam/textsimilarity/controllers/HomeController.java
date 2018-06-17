@@ -4,6 +4,9 @@ package com.smlteam.textsimilarity.controllers;
 import com.smlteam.textsimilarity.models.ParagraphResult;
 import com.smlteam.textsimilarity.services.Constants;
 import com.smlteam.textsimilarity.services.MainProcessor;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
@@ -12,9 +15,12 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -82,7 +88,7 @@ public class HomeController {
 
         ParagraphResult listResult = new MainProcessor().compare(isEN, testString, oriString);
         redirectAttributes.addFlashAttribute("finalScore", new DecimalFormat("#.##").format(listResult.getFinalScore() * 100));
-        if (listResult.getFinalScore() > 0.5) {
+        if (listResult.getFinalScore() > 0.0) {
             redirectAttributes.addFlashAttribute("resultColor", "red");
             redirectAttributes.addFlashAttribute("resultMess", "Plagiarism");
 
@@ -102,7 +108,10 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/text_upload", method = RequestMethod.POST)
-    public String textProcess(@RequestParam("testText") String testText, @RequestParam("oriText") String oriText, @RequestParam("isEN") String language, RedirectAttributes redirectAttributes) {
+    @ResponseBody
+    public ResponseEntity<String> textProcess(@RequestParam("testText") String testText,
+                                              @RequestParam("oriText") String oriText, @RequestParam("isEN") String language,
+                                              RedirectAttributes redirectAttributes) {
 
         boolean isEN = false;
         if(language.equalsIgnoreCase("en")){
@@ -145,6 +154,8 @@ public class HomeController {
         }
 
         redirectAttributes.addFlashAttribute("testPragraphResult", listResult.getLstSentence());
-        return "redirect:/result";
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Location", "/result");
+        return new ResponseEntity<String>(headers, HttpStatus.FOUND);
     }
 }
