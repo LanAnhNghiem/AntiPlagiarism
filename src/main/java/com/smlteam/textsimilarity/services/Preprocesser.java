@@ -46,9 +46,10 @@ public class Preprocesser {
 
         this.originSentences = new ArrayList<>();
         this.originSentences.addAll(Arrays.asList(content.split("\\.")));
+        originSentences.addAll(Arrays.asList(content.split("[.?]")));
         content = removeUrl(content);
         content = removeSpecialChar(content);
-        arrContent = Arrays.asList(content.split("\\."));
+        arrContent = Arrays.asList(content.split("[.?]"));
 //        try {
 //            //Tạo luồng và liên kết luồng
 //            BufferedReader br = new BufferedReader(new FileReader(fileName));
@@ -78,12 +79,13 @@ public class Preprocesser {
 
         this.originSentences = new ArrayList<>();
         this.originSentences.addAll(Arrays.asList(content.split("\\.")));
+        originSentences.addAll(Arrays.asList(content.split("[.?]")));
 
         content = removeUrl(content);
         content = removeSpecialChar(content);
         tokenList.addAll(tokenizer.tokenize(content));
 
-        arrContent = Arrays.asList(content.split("\\."));
+        arrContent = Arrays.asList(content.split("[.?]"));
 //        try{
 //            BufferedReader br = new BufferedReader(new FileReader(fileName));
 //            String line;
@@ -131,7 +133,7 @@ public class Preprocesser {
         word = word.toLowerCase();
         Pattern pt = null;
         try {
-            String reg = "[,/?|\\[\\](){}\\\\^([0-9]+)^!@#$%^&*()`~<>:;+=|\"]";
+            String reg = "[,/|\\[\\](){}\\\\^([0-9]+)^!@#$%^&?*()`~<>:;+=|\"]";
             pt = Pattern.compile(reg);
 
             Matcher match = pt.matcher(word);
