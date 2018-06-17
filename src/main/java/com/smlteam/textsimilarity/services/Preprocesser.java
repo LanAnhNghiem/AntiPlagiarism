@@ -43,10 +43,10 @@ public class Preprocesser {
     //file's content to list converting function
     public List<String> fileToList(String content) {
         List<String> arrContent;
-        originSentences.addAll(Arrays.asList(content.split("\\.")));
+        originSentences.addAll(Arrays.asList(content.split("[.?]")));
         content = removeUrl(content);
         content = removeSpecialChar(content);
-        arrContent = Arrays.asList(content.split("\\."));
+        arrContent = Arrays.asList(content.split("[.?]"));
 //        try {
 //            //Tạo luồng và liên kết luồng
 //            BufferedReader br = new BufferedReader(new FileReader(fileName));
@@ -73,13 +73,13 @@ public class Preprocesser {
         Tokenizer tokenizer = new Tokenizer();
         List<Token> tokenList = new LinkedList<>();
         List<String> lstWord = new ArrayList<>();
-        originSentences.addAll(Arrays.asList(content.split("\\.")));
+        originSentences.addAll(Arrays.asList(content.split("[.?]")));
 
         content = removeUrl(content);
         content = removeSpecialChar(content);
         tokenList.addAll(tokenizer.tokenize(content));
 
-        arrContent = Arrays.asList(content.split("\\."));
+        arrContent = Arrays.asList(content.split("[.?]"));
 //        try{
 //            BufferedReader br = new BufferedReader(new FileReader(fileName));
 //            String line;
@@ -127,7 +127,7 @@ public class Preprocesser {
         word = word.toLowerCase();
         Pattern pt = null;
         try {
-            String reg = "[,/?|\\[\\](){}\\\\^([0-9]+)^!@#$%^&*()`~<>:;+=|\"]";
+            String reg = "[,/|\\[\\](){}\\\\^([0-9]+)^!@#$%^&?*()`~<>:;+=|\"]";
             pt = Pattern.compile(reg);
 
             Matcher match = pt.matcher(word);

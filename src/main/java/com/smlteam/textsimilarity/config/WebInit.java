@@ -1,8 +1,11 @@
 package com.smlteam.textsimilarity.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import javax.servlet.Filter;
 import javax.servlet.MultipartConfigElement;
 import javax.servlet.ServletRegistration;
 import java.io.File;
@@ -40,4 +43,5 @@ public class WebInit extends AbstractAnnotationConfigDispatcherServletInitialize
         registration.setMultipartConfig(multipartConfigElement);
 
     }
+
 }
