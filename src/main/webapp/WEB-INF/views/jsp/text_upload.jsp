@@ -32,7 +32,7 @@
                 <div class="row text-left margin-bottom" style="margin-bottom: 15px">
                     <div class="col-xs-12">
                         <section layout="row" layout-align="center center">
-                            <a href="<%=request.getContextPath()%>">
+                            <a href="/">
                                 <md-button class="groupX right md-raised md-button md-ink-ripple"><strong><i
                                         class="fas fa-paperclip"></i>&nbsp;&nbsp;File<a href="/AntiPlagiarism/"></a></strong></md-button>
                             </a>
