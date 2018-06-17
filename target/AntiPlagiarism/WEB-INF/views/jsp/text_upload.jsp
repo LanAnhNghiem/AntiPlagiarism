@@ -44,7 +44,6 @@
                                     class="far fa-file-alt"></i>&nbsp;&nbsp;Text</strong><a href=""></a>
                             </md-button>
 
-
                         </section>
                     </div>
                 </div>

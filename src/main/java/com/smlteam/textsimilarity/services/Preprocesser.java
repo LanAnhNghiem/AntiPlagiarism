@@ -43,6 +43,8 @@ public class Preprocesser {
     //file's content to list converting function
     public List<String> fileToList(String content) {
         List<String> arrContent;
+
+        originSentences = new ArrayList<>();
         originSentences.addAll(Arrays.asList(content.split("\\.")));
         content = removeUrl(content);
         content = removeSpecialChar(content);
@@ -73,6 +75,8 @@ public class Preprocesser {
         Tokenizer tokenizer = new Tokenizer();
         List<Token> tokenList = new LinkedList<>();
         List<String> lstWord = new ArrayList<>();
+
+        originSentences = new ArrayList<>();
         originSentences.addAll(Arrays.asList(content.split("\\.")));
 
         content = removeUrl(content);

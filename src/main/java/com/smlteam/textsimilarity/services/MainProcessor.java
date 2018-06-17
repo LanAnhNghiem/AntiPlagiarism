@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -20,7 +21,9 @@ public class MainProcessor {
     public ParagraphResult compare(boolean isEN, String testString, String oriString) {
         Preprocesser preprocesser = new Preprocesser(isEN);
         List<String> originContent = preprocesser.getPureContentFromFile(oriString);
-        List<String> originResult = preprocesser.getOriginSentences();
+
+        List<String> originResult = new ArrayList<>();
+        originResult.addAll(preprocesser.getOriginSentences());
 
         List<String> testContent = preprocesser.getPureContentFromFile(testString);
         List<String> testResult = preprocesser.getOriginSentences();
@@ -61,53 +64,52 @@ public class MainProcessor {
         return finalResult;
     }
 
-    public static void saveFile(MultipartFile[] files) {
-        String UPLOADED_FOLDER = "/src/main/resources/test";
-
-        //Save test file
-        if (files[0].isEmpty()) {
-            try {
-                File file = new File(UPLOADED_FOLDER + "test.txt");
-                FileWriter writer = new FileWriter(file);
-                writer.write("");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            try {
-                byte[] bytes = files[0].getBytes();
-                Path path = Paths.get(UPLOADED_FOLDER + "test.txt");
-                Files.write(path, bytes);
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-
-        //Save origin file
-        if (files[1].isEmpty()) {
-            try {
-                File file = new File(UPLOADED_FOLDER + "origin.txt");
-                FileWriter writer = new FileWriter(file);
-                writer.write("");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            try {
-                byte[] bytes = files[1].getBytes();
-                Path path = Paths.get(UPLOADED_FOLDER + "origin.txt");
-                Files.write(path, bytes);
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-    }
-
-    public static void main(String[] args) {
+//    public static void saveFile(MultipartFile[] files) {
+//        String UPLOADED_FOLDER = "/src/main/resources/test";
+//
+//        //Save test file
+//        if (files[0].isEmpty()) {
+//            try {
+//                File file = new File(UPLOADED_FOLDER + "test.txt");
+//                FileWriter writer = new FileWriter(file);
+//                writer.write("");
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        } else {
+//            try {
+//                byte[] bytes = files[0].getBytes();
+//                Path path = Paths.get(UPLOADED_FOLDER + "test.txt");
+//                Files.write(path, bytes);
+//
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//
+//        //Save origin file
+//        if (files[1].isEmpty()) {
+//            try {
+//                File file = new File(UPLOADED_FOLDER + "origin.txt");
+//                FileWriter writer = new FileWriter(file);
+//                writer.write("");
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        } else {
+//            try {
+//                byte[] bytes = files[1].getBytes();
+//                Path path = Paths.get(UPLOADED_FOLDER + "origin.txt");
+//                Files.write(path, bytes);
+//
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//    }
+//    public static void main(String[] args) {
 
 //        new MainProcessor().compare(true);
 //        Preprocesser preprocesser = new Preprocesser(false);
@@ -136,5 +138,5 @@ public class MainProcessor {
 //                origin ++;
 //            }
 //        }
-    }
+//    }
 }
