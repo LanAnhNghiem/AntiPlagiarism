@@ -27,7 +27,7 @@
             </div>
         </div>
         <hr/>
-        <form action="text_upload" method="post" enctype="multipart/form-data" id="formSubmit">
+        <form action="text_upload" method="post" enctype="multipart/form-data" id="formSubmit" accept-charset="ISO-8859-1">
             <div ng-cloak ng-show="step != STEP_PROGRESS">
                 <div class="row text-left margin-bottom" style="margin-bottom: 15px">
                     <div class="col-xs-12">

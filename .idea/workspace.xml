@@ -9,14 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e8237762-ece3-4c6b-9385-af23259a45b6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/text_upload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/text_upload.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/controllers/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/services/MainProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/services/MainProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/services/Preprocesser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/classes/com/smlteam/textsimilarity/services/Preprocesser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/controllers/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/services/MainProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/services/MainProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/services/Preprocesser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smlteam/textsimilarity/services/Preprocesser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/text_upload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/AntiPlagiarism/WEB-INF/views/jsp/text_upload.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="106" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="223">
+              <caret line="108" column="24" lean-forward="true" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2380#2395#0" />
@@ -111,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text_upload.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="text_upload.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/text_upload.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="391">
               <caret line="29" column="122" selection-start-line="29" selection-start-column="122" selection-end-line="29" selection-end-column="122" />
             </state>
           </provider>
@@ -179,8 +172,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/test/test.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/services/Preprocesser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/services/MainProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/text_upload.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java" />
       </list>
     </option>
   </component>
@@ -582,12 +575,12 @@
       <workItem from="1529130668089" duration="5800000" />
       <workItem from="1529150938548" duration="4289000" />
       <workItem from="1529155883794" duration="6446000" />
-      <workItem from="1529187208242" duration="5106000" />
+      <workItem from="1529187208242" duration="5751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150658000" />
+    <option name="totallyTimeSpent" value="151303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -614,13 +607,13 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926794" weight="0.14173229" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.14173229" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2203514" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2203514" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32755905" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32755905" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -675,20 +668,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java</url>
-          <line>106</line>
-          <properties />
-          <option name="timeStamp" value="153" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java</url>
-          <line>107</line>
-          <properties />
-          <option name="timeStamp" value="154" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="155" />
     </breakpoint-manager>
     <watches-manager>
@@ -971,18 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2380#2395#0" />
-            <element signature="e#3957#3984#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/config/RootConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1016,8 +983,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jsp/text_upload.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="391">
           <caret line="29" column="122" selection-start-line="29" selection-start-column="122" selection-end-line="29" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smlteam/textsimilarity/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="108" column="24" lean-forward="true" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2380#2395#0" />
+            <element signature="e#3957#3984#0" />
+          </folding>
         </state>
       </provider>
     </entry>
