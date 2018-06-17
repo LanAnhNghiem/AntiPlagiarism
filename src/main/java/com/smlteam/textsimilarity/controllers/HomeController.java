@@ -135,7 +135,7 @@ public class HomeController {
         //Main processing
         ParagraphResult listResult = new MainProcessor().compare(isEN, testText, oriText);
         redirectAttributes.addFlashAttribute("finalScore", new DecimalFormat("#.##").format(listResult.getFinalScore() * 100));
-        if (listResult.getFinalScore() > 0.5) {
+        if (listResult.isPla()) {
             redirectAttributes.addFlashAttribute("resultColor", "red");
             redirectAttributes.addFlashAttribute("resultMess", "Plagiarism");
 

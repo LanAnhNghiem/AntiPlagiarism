@@ -45,7 +45,7 @@ public class MainProcessor {
                 //If is plagiarism
                 if (result > 0.5) {
                     finalResult.getLstSentence().add(new SentenceResult(testResult.get(i), originResult.get(i), result, "yes", i));
-
+                    finalResult.setPla(true);
                     totalScore += result;
                     break;
                 }

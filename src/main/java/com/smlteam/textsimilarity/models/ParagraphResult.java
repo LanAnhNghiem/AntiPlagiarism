@@ -9,6 +9,7 @@ import java.util.List;
 public class ParagraphResult {
 
     private Double finalScore;
+    boolean isPla;
     private List<SentenceResult> lstSentence;
 
 
@@ -27,13 +28,24 @@ public class ParagraphResult {
         this.lstSentence = lstSentence;
     }
 
-    public ParagraphResult(Double finalScore, List<SentenceResult> lstSentence) {
+    public ParagraphResult(Double finalScore, boolean isPla, List<SentenceResult> lstSentence) {
         this.finalScore = finalScore;
+        this.isPla = isPla;
         this.lstSentence = lstSentence;
     }
-//
+
+    public boolean isPla() {
+        return isPla;
+    }
+
+    public void setPla(boolean pla) {
+        isPla = pla;
+    }
+
+    //
     public ParagraphResult() {
         this.lstSentence = new ArrayList<>();
         this.finalScore = 0.0;
+        this.isPla = false;
     }
 }
